@@ -1,5 +1,6 @@
 @import "../base/police";
 @import"../utils/variables";
+@import"../utils/mixins";
 
 body{
     margin:0;
@@ -30,8 +31,8 @@ nav{
     align-items: center;
     height: 3em;;
     width:100%;
-    box-shadow: 0px 6px 6px #c4c4c4 inset;
-    background-color: $color_fourth;
+    box-shadow: 0px 6px 6px lighten($color_grey, 40%) inset;
+    background-color: lighten($color_grey, 46%);
     
 }
 
@@ -39,10 +40,191 @@ nav{
 
     border :none;
     font-size: 1.8rem;
+    background-color: lighten($color_grey, 46%);
+    margin-left: 5%;
     
 }
 
 .fa-map-marker-alt{
- margin-right: 5%;
+ margin-left: 5%;
+}
 
+.desc_restaurant{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   align-items: center;
+   padding-bottom: 20%;
+   background-color: lighten($color_grey, 50%);
+
+   &_p1{
+    font-weight: bold;
+    font-size: 3rem;
+    margin-top: 7%;
+   }
+
+   &_p2{
+       color: darken($color_grey, 40%);
+       font-size: 2.2rem;
+       margin-top: 3%;
+   }
+
+   &_p3{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       color: #fff;
+       width: 55%;
+       height: 100px;
+       background: linear-gradient(to bottom, $color_secondary, $color_primary);
+       margin-top: 8%;
+       font-size: 1.8rem;
+       font-weight: bold;
+       border-radius: 50px;
+   }
+}
+
+.menu{
+
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 140px;
+
+&_titre{
+   @include title;
+}
+
+&_number{
+    display: inline-block;
+    align-self: flex-start;
+    background-color: $color_primary;
+    color: #fff;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    position: relative;
+    top: 90px;
+    left: 3%;
+}
+&_bloc{
+    @include menu_fonct;
+    &-items{
+     margin-left: 5%;
+    }
+    &-purple{
+        background-color: lighten($color_primary, 35%);
+    }
+
+}
+}
+
+.fa-mobile-alt, .fa-ellipsis-v, .fa-store{
+
+    margin-left: 10%;
+    color: lighten($color_grey, 18%);
+}
+
+.fa-bars{
+    color: lighten($color_grey, 18%);
+
+}
+
+.fa-store{
+    color: $color_primary;
+}
+
+.restaurant{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lighten($color_grey, 50%);
+    padding-bottom: 120px;
+
+    a{
+        
+        display: inline-block;
+    }
+
+    &_title{
+        @include title;
+        padding-top: 70px;
+    }
+
+    &_box{
+        @include restaurant_box;
+        display: inline-block;
+    }
+
+    &_pict{
+        @include pict_restaurant;
+        &-new{
+            @include new;
+        }
+    }
+    &_pict-1{
+        background-image: url("../maquettes_ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+        background-position-y: 70%;
+    }
+
+    &_pict-2{
+        background-image: url("../maquettes_ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+        background-position-y: 60%;
+        
+    }
+
+    &_pict-3{
+        background-image: url("../maquettes_ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+        background-position-y: 80%;
+    }
+
+    &_pict-4{
+        background-image: url("../maquettes_ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    }
+
+    &_descr{
+       
+        display: flex;
+        font-size: 2rem;
+        padding-top: 3%;
+        
+        &-name{
+            margin-right: 40%;
+            margin-left: 5%;
+        }
+}
+}
+
+
+
+ .fa-heart{
+    color: lighten($color_grey, 25%);
+    position: absolute;
+    right: 10%;
+    margin-top: 2%;
+    z-index:1;
+    &:hover{
+        &::after{
+          opacity:1;
+        }
+      }
+      
+      &::after{
+            content:"";
+            color: lighten($color_grey, 25%);
+            position: absolute;
+            right: 10%;
+            margin-top: 2%;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+            border-radius: 50px;
+      }
+}
+
+
+footer{
+  @include footer;
 }
