@@ -70,6 +70,7 @@ nav{
    }
 
    &_p3{
+       cursor: pointer;
        display: flex;
        align-items: center;
        justify-content: center;
@@ -81,7 +82,32 @@ nav{
        font-size: 1.8rem;
        font-weight: bold;
        border-radius: 50px;
-   }
+       box-shadow: 6px 6px 20px $color_grey;
+       z-index:1;
+       &:hover{
+        &::after{
+        opacity:1;
+        }
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        width: 55%;
+        height: 100px;
+        background: linear-gradient(to bottom, lighten($color_secondary, 5%), lighten($color_primary, 5%));
+        box-shadow: 6px 6px 20px darken($color_grey,50%);
+        border-radius: 50px;
+        opacity:0;
+        z-index:-1;
+        transition: opacity 250ms;
+    }
+       
+}}
+
+.restaurant_expl{
+
+    display:flex;
+    align-items: center;
 }
 
 .menu{
@@ -193,31 +219,30 @@ margin-bottom: 140px;
 }
 
  .fa-heart{
+     
     color: lighten($color_grey, 25%);
     position: absolute;
     right: 10%;
     margin-top: 2%;
     z-index: 1;
-    &:hover {
-        &::after {
-            opacity: 1;
-        }
-    }
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;  
-        left: 0;
-        background-color: darkgreen;
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 250ms;
+&:active{
+    &.fa-heart-2{
+        opacity:1;
     }
 }
- 
+ &-2{
+     z-index: 2;
+     background:-webkit-linear-gradient(right, $color_primary, $color_secondary);
+     background-clip:text;
+     -webkit-background-clip:text;
+     color:transparent;
+     opacity:0;
+     transition: opacity 500ms;
 
-footer{
-  @include footer;
-}
+ }
+ } 
+
+
+ footer{
+    @include footer;
+  } 
