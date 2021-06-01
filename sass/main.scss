@@ -1,35 +1,8 @@
-@font-face {
-    font-family: 'robotoregular';
-    src: url('../maquettes_ohmyfood/police/roboto/Roboto-Regular-webfont.eot');
-    src: url('../maquettes_ohmyfood/police/roboto/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../maquettes_ohmyfood/police/roboto/Roboto-Regular-webfont.woff') format('woff'),
-         url('../maquettes_ohmyfood/police/roboto/Roboto-Regular-webfont.ttf') format('truetype'),
-         url('../maquettes_ohmyfood/police/roboto/Roboto-Regular-webfont.svg#robotoregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+@import"./utils/variables";
+@import"./base/polices";
+@import"./utils/mixins";
+@import"./utils/keyframes";
 
-}
-
-@font-face {
-    font-family: 'shrikhandregular';
-    src: url('../maquettes_ohmyfood/police/shrikhand/shrikhand-regular-webfont.woff2') format('woff2'),
-         url('../maquettes_ohmyfood/police/shrikhand/shrikhand-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-$color_primary: #9356DC;
-$color_secondary: #FF79DA;
-$color_tertiary: #99E2D0;
-$color_grey: #757575;
-
-
-
-$case_width:90%;
-$case_height: 300px;
 
 body{
     margin:0;
@@ -45,6 +18,9 @@ body{
     position: absolute;
     top:80%;
     left: 28%;
+    @media screen and (max-width: 768px) and (max-width: 1022px){
+        left: 38%;
+    }
     z-index: 3;
    
 }
@@ -55,22 +31,7 @@ body{
     animation-fill-mode: forwards;
 }
 
-@keyframes spin{
-    0%{
-        transform: rotate(-360deg);
-        transition-timing-function: cubic-bezier(0,.71,1,0.42);
-    }
-    
-    90%{
-        transform: rotate(90deg);
-       
-    }
 
-    100%{
-        transform: scale(0);
-    }
-    
-    }
     /* fin loading_spinner */
 
 
@@ -107,6 +68,9 @@ nav{
     height: 4em;
     box-shadow: 0px 6px 6px lighten($color_grey, 40%) inset;
     background-color: lighten($color_grey, 46%);
+    @media screen and (max-width: 768px) and (max-width: 1022px){
+        height: 6em;
+    }
     
 }
 
@@ -114,15 +78,24 @@ nav{
 
     border :none;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     background-color: lighten($color_grey, 46%);
     margin-left: 8%;
+    @media screen and (max-width: 768px) and (max-width: 1022px){
+        font-size: 2rem;
+        margin-left: 5%;
+    }
     
 }
 
 .fa-map-marker-alt{
  margin-left: 17%;
  font-size: 1.5em;
+ @media screen and (max-width: 768px) and (max-width: 1022px){
+    font-size:2em;
+    margin-left: 30%;
+}
+ 
 }
 
 .desc_restaurant{
@@ -136,12 +109,20 @@ nav{
     font-weight: bold;
     font-size: 1.9rem;
     margin-top: 8%;
+    @media screen and (max-width: 768px) and (max-width: 1022px){
+        font-size: 3rem;
+        
+    }
    }
 
    &_p2{
        color: darken($color_grey, 20%);
        font-size: 1.2rem;
        margin-top: 3%;
+       @media screen and (max-width: 768px) and (max-width: 1022px){
+        font-size: 2rem;
+       
+    }
    }
 
    &_p3{
@@ -159,6 +140,13 @@ nav{
        border-radius: 50px;
        box-shadow: 6px 6px 20px $color_grey;
        z-index:1;
+       @media screen and (max-width: 768px) and (max-width: 1022px){
+        font-size: 1.8rem;
+        margin-top: 12%;
+        width: 80%;
+       height: 80px;
+        
+    }
        &:hover{
         &::after{
         opacity:1;
@@ -175,6 +163,10 @@ nav{
         opacity:0;
         z-index:-1;
         transition: opacity 250ms;
+        @media screen and (max-width: 768px) and (max-width: 1022px){
+            font-size: 1.8rem;
+            width: 80%;
+           height: 80px;}
     }
        
 }}
@@ -192,7 +184,10 @@ margin-bottom: 90px;
   margin-left: 5%;
    font-size: 2rem;
    margin-bottom: 0;
-}
+   @media screen and (max-width: 768px) and (max-width: 1022px){
+    font-size: 2.5rem;
+   
+}}
 
 &_number{
     display: inline-block;
@@ -201,24 +196,26 @@ margin-bottom: 90px;
     background-color: $color_primary;
     color: #fff;
     text-align: center;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     border-radius: 50px;
     position: relative;
     top: 55px;
     left: 3%;
+    @media screen and (max-width: 768px) and (max-width: 1022px){
+        font-size: 2.3rem;
+        top: 90px;
+        width: 50px;
+         height: 50px;
+    }
 }
 &_bloc{
-    display: flex;
-    align-items: center;
-    width: $case_width;
-    height: 80px;
-    background-color: lighten($color_grey, 50%);
-    border-radius:50px;
-    font-weight: bold;;
-    box-shadow: 6px 6px 20px lighten($color_grey, 40%);
-    font-size:1rem;
-    margin-left: 0;
+@include blocs;
+@media screen and (max-width: 768px) and (max-width: 1022px){
+    font-size: 2.3rem;
+    height: 130px;
+   
+}
     
     &-items{
      margin-left: 10%;
@@ -232,7 +229,7 @@ margin-bottom: 90px;
 
 .fa-mobile-alt, .fa-ellipsis-v, .fa-store{
 
-    margin-left: 10%;
+    margin-left: 12%;
     color: lighten($color_grey, 18%);
 }
 
@@ -258,20 +255,19 @@ margin-bottom: 90px;
         margin-left: 5%;
         padding-top: 40px;
         font-size: 2rem;
+        @media screen and (max-width: 768px) and (max-width: 1022px){
+            font-size: 2.5rem;
+           
+        }
    
     }
 
     &_box{
-        width: $case_width;
-        height: 230px;
-        display: flex;
-        flex-direction: column;
-        border-radius: 50px;
-        margin-bottom: 7%;
-        background-color: #fff;
-        text-decoration: none;
-        color: #000;
-        display: inline-block;
+  @include box;
+  @media screen and (max-width: 768px) and (max-width: 1022px){
+    
+     height: 450px;
+}
     }
 
     &_pict{
@@ -295,6 +291,10 @@ margin-bottom: 90px;
            position: relative;
            top: 20px;
            right: 2%;
+           @media screen and (max-width: 768px) and (max-width: 1022px){
+            font-size: 2rem;
+           
+        }
         }
     }
     &_pict-1{
@@ -323,7 +323,11 @@ margin-bottom: 90px;
         display: flex;
         font-size: 1rem;
         padding-top: 3%;
-        
+        @media screen and (max-width: 768px) and (max-width: 1022px){
+            font-size: 2rem;
+           
+        }
+
         &-name{
             margin-right: 40%;
             margin-left: 5%;
@@ -358,23 +362,10 @@ margin-bottom: 90px;
 
 /* début footer */
  footer{
-    background-color: darken($color_grey, 20%);
-  color: #fff;
-  font-size: 1rem;
-  margin-top: 0;
-  border: 2px darken($color_grey, 20%) solid;
-  padding-left: 5%;
-  font-family: robotoregular, serif;
-  .footer_title{
-    font-family: shrikhandregular;
-    font-weight:lighter;
-  }
-  .fa-utensils, .fa-hands-helping{
-    margin-right: 2%;
-  }
-  #contact{
-    text-decoration: none;
-    color: #fff;
-  }
+ @include footer;
+ @media screen and (max-width: 768px) and (max-width: 1022px){
+    font-size: 2rem;
+   
+}
   } 
 /* fin footer */

@@ -1,0 +1,46 @@
+@mixin blocs{
+    display: flex;
+    align-items: center;
+    width: $case_width;
+    height: 80px;
+    background-color: lighten($color_grey, 50%);
+    border-radius:50px;
+    font-weight: bold;;
+    box-shadow: 6px 6px 20px lighten($color_grey, 40%);
+    font-size:1rem;
+    margin-left: 0;
+}
+
+@mixin box{
+    width: $case_width;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px;
+    margin-bottom: 7%;
+    background-color: #fff;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+}
+
+@mixin footer{
+    background-color: darken($color_grey, 20%);
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 0;
+    border: 2px darken($color_grey, 20%) solid;
+    padding-left: 5%;
+    font-family: robotoregular, serif;
+    .footer_title{
+      font-family: shrikhandregular;
+      font-weight:lighter;
+    }
+    .fa-utensils, .fa-hands-helping{
+      margin-right: 2%;
+    }
+    #contact{
+      text-decoration: none;
+      color: #fff;
+    }
+}

@@ -1,0 +1,16 @@
+@keyframes spin{
+    0%{
+        transform: rotate(-360deg);
+        transition-timing-function: cubic-bezier(0,.71,1,0.42);
+    }
+    
+    90%{
+        transform: rotate(90deg);
+       
+    }
+
+    100%{
+        transform: scale(0);
+    }
+    
+    }
