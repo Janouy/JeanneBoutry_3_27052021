@@ -1,11 +1,13 @@
 @keyframes spin{
     0%{
-        transform: rotate(-360deg);
-        transition-timing-function: cubic-bezier(0,.71,1,0.42);
+        transform: rotate(0deg);
+        color: lighten($color_secondary, 10%);
+        
     }
     
     90%{
-        transform: rotate(90deg);
+        transform: rotate(280deg);
+        color: $color_primary;
        
     }
 

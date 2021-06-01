@@ -14,11 +14,12 @@
 }
 @keyframes spin {
   0% {
-    transform: rotate(-360deg);
-    transition-timing-function: cubic-bezier(0, 0.71, 1, 0.42);
+    transform: rotate(0deg);
+    color: #fface8;
   }
   90% {
-    transform: rotate(90deg);
+    transform: rotate(280deg);
+    color: #9356DC;
   }
   100% {
     transform: scale(0);
@@ -34,20 +35,31 @@ body {
 .loading_spinner {
   width: 22%;
   position: absolute;
-  top: 80%;
-  left: 28%;
+  top: 50%;
+  left: 4%;
   z-index: 3;
 }
-@media screen and (max-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 1022px) {
   .loading_spinner {
-    left: 38%;
+    top: 20%;
+    left: 18%;
   }
 }
 
 .fa-spinner {
-  color: #782cd3;
   animation: spin 3000ms;
   animation-fill-mode: forwards;
+  font-size: 350px;
+}
+@media screen and (min-width: 768px) and (max-width: 1022px) {
+  .fa-spinner {
+    font-size: 700px;
+  }
+}
+@media screen and (min-width: 1022px) {
+  .fa-spinner {
+    font-size: 1200px;
+  }
 }
 
 /* fin loading_spinner */
@@ -78,7 +90,7 @@ nav {
   box-shadow: 0px 6px 6px #dbdbdb inset;
   background-color: #eaeaea;
 }
-@media screen and (max-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1022px) {
   nav {
     height: 6em;
   }
@@ -91,7 +103,7 @@ nav {
   background-color: #eaeaea;
   margin-left: 8%;
 }
-@media screen and (max-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1022px) {
   #search {
     font-size: 2rem;
     margin-left: 5%;
@@ -102,7 +114,7 @@ nav {
   margin-left: 17%;
   font-size: 1.5em;
 }
-@media screen and (max-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1022px) {
   .fa-map-marker-alt {
     font-size: 2em;
     margin-left: 30%;
@@ -122,7 +134,7 @@ nav {
   font-size: 1.9rem;
   margin-top: 8%;
 }
-@media screen and (max-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1022px) {
   .desc_restaurant_p1 {
     font-size: 3rem;
   }
@@ -132,7 +144,7 @@ nav {
   font-size: 1.2rem;
   margin-top: 3%;
 }
-@media screen and (max-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1022px) {
   .desc_restaurant_p2 {
     font-size: 2rem;
   }
@@ -153,7 +165,7 @@ nav {
   box-shadow: 6px 6px 20px #757575;
   z-index: 1;
 }
-@media screen and (max-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1022px) {
   .desc_restaurant_p3 {
     font-size: 1.8rem;
     margin-top: 12%;
@@ -176,7 +188,7 @@ nav {
   z-index: -1;
   transition: opacity 250ms;
 }
-@media screen and (max-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1022px) {
   .desc_restaurant_p3::after {
     font-size: 1.8rem;
     width: 80%;
@@ -196,7 +208,7 @@ nav {
   font-size: 2rem;
   margin-bottom: 0;
 }
-@media screen and (max-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1022px) {
   .menu_titre {
     font-size: 2.5rem;
   }
@@ -215,7 +227,7 @@ nav {
   top: 55px;
   left: 3%;
 }
-@media screen and (max-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1022px) {
   .menu_number {
     font-size: 2.3rem;
     top: 90px;
@@ -235,7 +247,7 @@ nav {
   font-size: 1rem;
   margin-left: 0;
 }
-@media screen and (max-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1022px) {
   .menu_bloc {
     font-size: 2.3rem;
     height: 130px;
@@ -274,7 +286,7 @@ nav {
   padding-top: 40px;
   font-size: 2rem;
 }
-@media screen and (max-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1022px) {
   .restaurant_title {
     font-size: 2.5rem;
   }
@@ -291,7 +303,7 @@ nav {
   color: #000;
   display: inline-block;
 }
-@media screen and (max-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1022px) {
   .restaurant_box {
     height: 450px;
   }
@@ -319,7 +331,7 @@ nav {
   top: 20px;
   right: 2%;
 }
-@media screen and (max-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1022px) {
   .restaurant_pict-new {
     font-size: 2rem;
   }
@@ -345,7 +357,7 @@ nav {
   font-size: 1rem;
   padding-top: 3%;
 }
-@media screen and (max-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1022px) {
   .restaurant_descr {
     font-size: 2rem;
   }
@@ -397,7 +409,7 @@ footer #contact {
   text-decoration: none;
   color: #fff;
 }
-@media screen and (max-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1022px) {
   footer {
     font-size: 2rem;
   }
