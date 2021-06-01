@@ -1,0 +1,257 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "robotoregular";
+  src: url("../maquettes_ohmyfood/police/roboto/Roboto-Regular-webfont.eot");
+  src: url("../maquettes_ohmyfood/police/roboto/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../maquettes_ohmyfood/police/roboto/Roboto-Regular-webfont.woff") format("woff"), url("../maquettes_ohmyfood/police/roboto/Roboto-Regular-webfont.ttf") format("truetype"), url("../maquettes_ohmyfood/police/roboto/Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "shrikhandregular";
+  src: url("../maquettes_ohmyfood/police/shrikhand/shrikhand-regular-webfont.woff2") format("woff2"), url("../maquettes_ohmyfood/police/shrikhand/shrikhand-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  margin: 0;
+}
+
+/* début header */
+#logo {
+  display: flex;
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+/* fin header */
+/* début main */
+main {
+  width: auto;
+  font-family: robotoregular, serif;
+  font-size: 1.8rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 100%;
+  box-shadow: 0px 6px 6px #dbdbdb inset;
+  background-color: #eaeaea;
+}
+
+#search {
+  border: none;
+  font-size: 1.8rem;
+  background-color: #eaeaea;
+  margin-left: 5%;
+}
+
+.fa-map-marker-alt {
+  margin-left: 5%;
+}
+
+.desc_restaurant {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 20%;
+  background-color: whitesmoke;
+}
+.desc_restaurant_p1 {
+  font-weight: bold;
+  font-size: 3rem;
+  margin-top: 7%;
+}
+.desc_restaurant_p2 {
+  color: #0f0f0f;
+  font-size: 2.2rem;
+  margin-top: 3%;
+}
+.desc_restaurant_p3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  width: 55%;
+  height: 100px;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  margin-top: 8%;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-radius: 50px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 140px;
+}
+.menu_titre {
+  align-self: flex-start;
+  margin-left: 5%;
+}
+.menu_number {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: #9356DC;
+  color: #fff;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  position: relative;
+  top: 90px;
+  left: 3%;
+}
+.menu_bloc {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 140px;
+  background-color: whitesmoke;
+  border-radius: 50px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  box-shadow: 6px 6px 20px #dbdbdb;
+}
+.menu_bloc-items {
+  margin-left: 5%;
+}
+.menu_bloc-purple {
+  background-color: #f2eafb;
+}
+
+.fa-mobile-alt, .fa-ellipsis-v, .fa-store {
+  margin-left: 10%;
+  color: #a3a3a3;
+}
+
+.fa-bars {
+  color: #a3a3a3;
+}
+
+.fa-store {
+  color: #9356DC;
+}
+
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+  padding-bottom: 120px;
+}
+.restaurant_title {
+  align-self: flex-start;
+  margin-left: 5%;
+  padding-top: 70px;
+}
+.restaurant_box {
+  width: 90%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50px;
+  margin-bottom: 5%;
+  background-color: #fff;
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+}
+.restaurant_pict {
+  width: 100%;
+  height: 70%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50px 50px 0px 0px;
+}
+.restaurant_pict-new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 80%;
+  width: 18%;
+  height: 15%;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: #99E2D0;
+  color: #278870;
+  border-radius: 5px;
+  position: relative;
+  top: 20px;
+  right: 2%;
+}
+.restaurant_pict-1 {
+  background-image: url("../maquettes_ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-position-y: 70%;
+}
+.restaurant_pict-2 {
+  background-image: url("../maquettes_ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-position-y: 60%;
+}
+.restaurant_pict-3 {
+  background-image: url("../maquettes_ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-position-y: 80%;
+}
+.restaurant_pict-4 {
+  background-image: url("../maquettes_ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+.restaurant_descr {
+  display: flex;
+  font-size: 2rem;
+  padding-top: 3%;
+}
+.restaurant_descr-name {
+  margin-right: 40%;
+  margin-left: 5%;
+}
+
+.fa-heart {
+  color: #b5b5b5;
+  position: absolute;
+  right: 10%;
+  margin-top: 2%;
+  z-index: 1;
+}
+.fa-heart:hover::after {
+  opacity: 1;
+}
+.fa-heart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: darkgreen;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+}
+
+footer {
+  background-color: #424242;
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 0;
+  border: 2px #424242 solid;
+  padding-left: 5%;
+  font-family: robotoregular, serif;
+}
+footer .footer_title {
+  font-family: shrikhandregular;
+}
+footer .fa-utensils, footer .fa-hands-helping {
+  margin-right: 2%;
+}
+footer #contact {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

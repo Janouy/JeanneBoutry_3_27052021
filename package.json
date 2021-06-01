@@ -1,11 +1,23 @@
 {
-  "name": "ohmyfood",
+  "name": "jeanneboutry_3_27052021",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "node-sass": "^6.0.0"
+  },
+  "devDependencies": {},
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss: ./public/css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Janouy/JeanneBoutry_3_27052021.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Janouy/JeanneBoutry_3_27052021/issues"
+  },
+  "homepage": "https://github.com/Janouy/JeanneBoutry_3_27052021#readme"
 }

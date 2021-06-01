@@ -143,11 +143,6 @@ margin-bottom: 140px;
     background-color: lighten($color_grey, 50%);
     padding-bottom: 120px;
 
-    a{
-        
-        display: inline-block;
-    }
-
     &_title{
         @include title;
         padding-top: 70px;
@@ -197,33 +192,31 @@ margin-bottom: 140px;
 }
 }
 
-
-
  .fa-heart{
     color: lighten($color_grey, 25%);
     position: absolute;
     right: 10%;
     margin-top: 2%;
-    z-index:1;
-    &:hover{
-        &::after{
-          opacity:1;
+    z-index: 1;
+    &:hover {
+        &::after {
+            opacity: 1;
         }
-      }
-      
-      &::after{
-            content:"";
-            color: lighten($color_grey, 25%);
-            position: absolute;
-            right: 10%;
-            margin-top: 2%;
-            opacity: 0;
-            z-index: -1;
-            transition: opacity 250ms;
-            border-radius: 50px;
-      }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;  
+        left: 0;
+        background-color: darkgreen;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+    }
 }
-
+ 
 
 footer{
   @include footer;
