@@ -1,17 +1,92 @@
-@import "../base/police";
-@import"../utils/variables";
-@import"../utils/mixins";
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../maquettes_ohmyfood/police/roboto/Roboto-Regular-webfont.eot');
+    src: url('../maquettes_ohmyfood/police/roboto/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../maquettes_ohmyfood/police/roboto/Roboto-Regular-webfont.woff') format('woff'),
+         url('../maquettes_ohmyfood/police/roboto/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../maquettes_ohmyfood/police/roboto/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('../maquettes_ohmyfood/police/shrikhand/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('../maquettes_ohmyfood/police/shrikhand/shrikhand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+$color_primary: #9356DC;
+$color_secondary: #FF79DA;
+$color_tertiary: #99E2D0;
+$color_grey: #757575;
+
+
+
+$case_width:90%;
+$case_height: 300px;
 
 body{
     margin:0;
+    width: 100%;
+    z-index: -1;
 }
+
+/* début loading_spinner */
+
+.loading_spinner{
+
+    width: 22%;
+    position: absolute;
+    top:80%;
+    left: 28%;
+    z-index: 3;
+   
+}
+
+.fa-spinner{
+    color: darken($color_primary, 10%);
+    animation: spin 3000ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(-360deg);
+        transition-timing-function: cubic-bezier(0,.71,1,0.42);
+    }
+    
+    90%{
+        transform: rotate(90deg);
+       
+    }
+
+    100%{
+        transform: scale(0);
+    }
+    
+    }
+    /* fin loading_spinner */
+
+
+    
 /* début header */
 
+header{
+    display: flex;
+    justify-content: center;
+}
 #logo{
-     display: flex;
-    margin: auto;
-    margin-top: 3%;
-    margin-bottom: 3%;
+    
+    width: 60%;
+    margin: 5%;
+    margin-bottom:3%;
+
 }
 
 /* fin header */
@@ -21,7 +96,7 @@ main{
 
     width: auto;
     font-family: robotoregular, serif;
-    font-size: 1.8rem;
+    
 }
 
 
@@ -29,8 +104,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 3em;;
-    width:100%;
+    height: 4em;
     box-shadow: 0px 6px 6px lighten($color_grey, 40%) inset;
     background-color: lighten($color_grey, 46%);
     
@@ -39,14 +113,16 @@ nav{
 #search{
 
     border :none;
-    font-size: 1.8rem;
+    width: 100%;
+    font-size: 1.5rem;
     background-color: lighten($color_grey, 46%);
-    margin-left: 5%;
+    margin-left: 8%;
     
 }
 
 .fa-map-marker-alt{
- margin-left: 5%;
+ margin-left: 17%;
+ font-size: 1.5em;
 }
 
 .desc_restaurant{
@@ -56,16 +132,15 @@ nav{
    align-items: center;
    padding-bottom: 20%;
    background-color: lighten($color_grey, 50%);
-
    &_p1{
     font-weight: bold;
-    font-size: 3rem;
-    margin-top: 7%;
+    font-size: 1.9rem;
+    margin-top: 8%;
    }
 
    &_p2{
-       color: darken($color_grey, 40%);
-       font-size: 2.2rem;
+       color: darken($color_grey, 20%);
+       font-size: 1.2rem;
        margin-top: 3%;
    }
 
@@ -75,11 +150,11 @@ nav{
        align-items: center;
        justify-content: center;
        color: #fff;
-       width: 55%;
-       height: 100px;
+       width: 70%;
+       height: 65px;
        background: linear-gradient(to bottom, $color_secondary, $color_primary);
        margin-top: 8%;
-       font-size: 1.8rem;
+       font-size: 1.2rem;
        font-weight: bold;
        border-radius: 50px;
        box-shadow: 6px 6px 20px $color_grey;
@@ -92,8 +167,8 @@ nav{
     &::after{
         content: "";
         position: absolute;
-        width: 55%;
-        height: 100px;
+        width: 70%;
+        height: 65px;
         background: linear-gradient(to bottom, lighten($color_secondary, 5%), lighten($color_primary, 5%));
         box-shadow: 6px 6px 20px darken($color_grey,50%);
         border-radius: 50px;
@@ -104,40 +179,49 @@ nav{
        
 }}
 
-.restaurant_expl{
-
-    display:flex;
-    align-items: center;
-}
 
 .menu{
 
 display: flex;
 flex-direction: column;
 align-items: center;
-margin-bottom: 140px;
+margin-bottom: 90px;
 
 &_titre{
-   @include title;
+    align-self: flex-start;
+  margin-left: 5%;
+   font-size: 2rem;
+   margin-bottom: 0;
 }
 
 &_number{
     display: inline-block;
     align-self: flex-start;
+    font-size: 1.2rem;
     background-color: $color_primary;
     color: #fff;
     text-align: center;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50px;
     position: relative;
-    top: 90px;
+    top: 55px;
     left: 3%;
 }
 &_bloc{
-    @include menu_fonct;
+    display: flex;
+    align-items: center;
+    width: $case_width;
+    height: 80px;
+    background-color: lighten($color_grey, 50%);
+    border-radius:50px;
+    font-weight: bold;;
+    box-shadow: 6px 6px 20px lighten($color_grey, 40%);
+    font-size:1rem;
+    margin-left: 0;
+    
     &-items{
-     margin-left: 5%;
+     margin-left: 10%;
     }
     &-purple{
         background-color: lighten($color_primary, 35%);
@@ -167,22 +251,50 @@ margin-bottom: 140px;
     flex-direction: column;
     align-items: center;
     background-color: lighten($color_grey, 50%);
-    padding-bottom: 120px;
+    padding-bottom: 60px;
 
     &_title{
-        @include title;
-        padding-top: 70px;
+        align-self: flex-start;
+        margin-left: 5%;
+        padding-top: 40px;
+        font-size: 2rem;
+   
     }
 
     &_box{
-        @include restaurant_box;
+        width: $case_width;
+        height: 230px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 50px;
+        margin-bottom: 7%;
+        background-color: #fff;
+        text-decoration: none;
+        color: #000;
         display: inline-block;
     }
 
     &_pict{
-        @include pict_restaurant;
+        width: 100%;
+         height: 70%;
+         background-size: cover;
+           background-repeat: no-repeat;
+            border-radius: 30px 30px 0px 0px;
         &-new{
-            @include new;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 75%;
+            width: 25%;
+            height: 20%;
+            font-size: 0.8rem;
+            font-weight: bold;
+           background-color:$color_tertiary;
+           color: darken($color_tertiary, 40%);
+           border-radius: 2px;
+           position: relative;
+           top: 20px;
+           right: 2%;
         }
     }
     &_pict-1{
@@ -202,13 +314,14 @@ margin-bottom: 140px;
     }
 
     &_pict-4{
-        background-image: url("../maquettes_ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+        background-image: url("../maquettes_ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+        background-position-y: 80%;
     }
 
     &_descr{
        
         display: flex;
-        font-size: 2rem;
+        font-size: 1rem;
         padding-top: 3%;
         
         &-name{
@@ -241,8 +354,27 @@ margin-bottom: 140px;
 
  }
  } 
+/* fin main */
 
-
+/* début footer */
  footer{
-    @include footer;
+    background-color: darken($color_grey, 20%);
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 0;
+  border: 2px darken($color_grey, 20%) solid;
+  padding-left: 5%;
+  font-family: robotoregular, serif;
+  .footer_title{
+    font-family: shrikhandregular;
+    font-weight:lighter;
+  }
+  .fa-utensils, .fa-hands-helping{
+    margin-right: 2%;
+  }
+  #contact{
+    text-decoration: none;
+    color: #fff;
+  }
   } 
+/* fin footer */
