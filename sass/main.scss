@@ -8,6 +8,11 @@ body{
     margin:0;
     width: 100%;
     z-index: -1;
+    @media screen and (min-width: 1022px){
+        width: 90%;
+        margin: auto;
+       
+     }
 }
 
 /* début loading_spinner */
@@ -49,13 +54,20 @@ body{
 header{
     display: flex;
     justify-content: center;
+  @media screen and (min-width: 1022px){
+    justify-content: flex-start;
+    
+ }
 }
 #logo{
     
     width: 60%;
     margin: 5%;
     margin-bottom:3%;
-
+    @media screen and (min-width: 1022px){
+        width: 400px;
+        margin-top: 2%;
+     }
 }
 
 /* fin header */
@@ -66,10 +78,12 @@ main{
     width: auto;
     font-family: robotoregular, serif;
     
+    
 }
 
 
 nav{
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,6 +92,14 @@ nav{
     background-color: lighten($color_grey, 46%);
     @media screen and (min-width: 768px) and (max-width: 1022px){
         height: 6em;
+    }
+    @media screen and (min-width: 1022px){
+       height: 3em;
+       width:30%;
+       border-radius: 5px;
+       position: absolute;
+       right:5%;
+       top: 0%;
     }
     
 }
@@ -93,6 +115,11 @@ nav{
         font-size: 2rem;
         margin-left: 5%;
     }
+    @media screen and (min-width: 1022px){
+        border-radius: 10px;
+        width: 50%;
+     }
+     
     
 }
 
@@ -113,14 +140,22 @@ nav{
    align-items: center;
    padding-bottom: 20%;
    background-color: lighten($color_grey, 50%);
+   @media screen and (min-width: 1022px){
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    padding-bottom: 8%;
+    border-radius: 15px;
+ }
+
    &_p1{
     font-weight: bold;
     font-size: 1.9rem;
     margin-top: 8%;
     @media screen and (min-width: 768px) and (max-width: 1022px){
         font-size: 3rem;
-        
     }
+  
    }
 
    &_p2{
@@ -128,9 +163,11 @@ nav{
        font-size: 1.2rem;
        margin-top: 3%;
        @media screen and (min-width: 768px) and (max-width: 1022px){
-        font-size: 2rem;
-       
+        font-size: 2rem; 
     }
+    @media screen and (min-width: 1022px){
+       margin-top: 8%;
+     }
    }
 
    &_p3{
@@ -148,13 +185,17 @@ nav{
        border-radius: 50px;
        box-shadow: 6px 6px 20px $color_grey;
        z-index:1;
+       outline: 0;
        @media screen and (min-width: 768px) and (max-width: 1022px){
         font-size: 1.8rem;
         margin-top: 12%;
         width: 80%;
        height: 80px;
-        
+       outline: 0;
     }
+    @media screen and (min-width: 1022px){
+        width: 350px;
+     }
        &:hover{
         &::after{
         opacity:1;
@@ -162,6 +203,7 @@ nav{
     }
     &::after{
         content: "";
+        outline: 0;
         position: absolute;
         width: 70%;
         height: 65px;
@@ -174,11 +216,15 @@ nav{
         @media screen and (min-width: 768px) and (max-width: 1022px){
             font-size: 1.8rem;
             width: 80%;
-           height: 80px;}
+           height: 80px;
+           outline: 0;
     }
-       
-}}
-
+    @media screen and (min-width: 1022px){
+        width: 350px;
+     }
+}
+}
+}
 
 .menu{
 
@@ -187,15 +233,21 @@ flex-direction: column;
 align-items: center;
 margin-bottom: 90px;
 
+
 &_titre{
-    align-self: flex-start;
+   align-self: flex-start;
   margin-left: 5%;
    font-size: 2rem;
    margin-bottom: 0;
    @media screen and (min-width: 768px) and (max-width: 1022px){
     font-size: 2.5rem;
+  }
+  @media screen and (min-width: 1022px){
+    margin-left:0;
    
-}}
+ }
+
+}
 
 &_number{
     display: inline-block;
@@ -216,6 +268,13 @@ margin-bottom: 90px;
         width: 50px;
          height: 50px;
     }
+    @media screen and (min-width: 1022px){
+        font-size: 2rem;
+        top: 68px;
+        left: 580px;
+        width: 50px;
+        height: 50px;
+     }
 }
 &_bloc{
 @include blocs;
@@ -227,6 +286,7 @@ margin-bottom: 90px;
     
     &-items{
      margin-left: 10%;
+  
     }
     &-purple{
         background-color: lighten($color_primary, 35%);
@@ -239,10 +299,18 @@ margin-bottom: 90px;
 
     margin-left: 12%;
     color: lighten($color_grey, 18%);
+    @media screen and (min-width: 1022px){
+        font-size: 2rem;
+       
+     }
 }
 
 .fa-bars{
     color: lighten($color_grey, 18%);
+    @media screen and (min-width: 1022px){
+        font-size: 2rem;
+       
+     }
 
 }
 
@@ -257,6 +325,12 @@ margin-bottom: 90px;
     align-items: center;
     background-color: lighten($color_grey, 50%);
     padding-bottom: 60px;
+    @media screen and (min-width: 1022px){
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: 15px;
+        justify-content: space-around;
+     }
 
     &_title{
         align-self: flex-start;
@@ -265,8 +339,12 @@ margin-bottom: 90px;
         font-size: 2rem;
         @media screen and (min-width: 768px) and (max-width: 1022px){
             font-size: 2.5rem;
-           
         }
+        @media screen and (min-width: 1022px){
+            margin-left:0;
+            padding-top: 20px;
+            width: 100%;
+         }
    
     }
 

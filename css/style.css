@@ -30,6 +30,12 @@ body {
   width: 100%;
   z-index: -1;
 }
+@media screen and (min-width: 1022px) {
+  body {
+    width: 90%;
+    margin: auto;
+  }
+}
 
 /* début loading_spinner */
 .loading_spinner {
@@ -68,11 +74,22 @@ header {
   display: flex;
   justify-content: center;
 }
+@media screen and (min-width: 1022px) {
+  header {
+    justify-content: flex-start;
+  }
+}
 
 #logo {
   width: 60%;
   margin: 5%;
   margin-bottom: 3%;
+}
+@media screen and (min-width: 1022px) {
+  #logo {
+    width: 400px;
+    margin-top: 2%;
+  }
 }
 
 /* fin header */
@@ -95,6 +112,16 @@ nav {
     height: 6em;
   }
 }
+@media screen and (min-width: 1022px) {
+  nav {
+    height: 3em;
+    width: 30%;
+    border-radius: 5px;
+    position: absolute;
+    right: 5%;
+    top: 0%;
+  }
+}
 
 #search {
   border: none;
@@ -107,6 +134,12 @@ nav {
   #search {
     font-size: 2rem;
     margin-left: 5%;
+  }
+}
+@media screen and (min-width: 1022px) {
+  #search {
+    border-radius: 10px;
+    width: 50%;
   }
 }
 
@@ -129,6 +162,15 @@ nav {
   padding-bottom: 20%;
   background-color: whitesmoke;
 }
+@media screen and (min-width: 1022px) {
+  .desc_restaurant {
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    padding-bottom: 8%;
+    border-radius: 15px;
+  }
+}
 .desc_restaurant_p1 {
   font-weight: bold;
   font-size: 1.9rem;
@@ -149,6 +191,11 @@ nav {
     font-size: 2rem;
   }
 }
+@media screen and (min-width: 1022px) {
+  .desc_restaurant_p2 {
+    margin-top: 8%;
+  }
+}
 .desc_restaurant_p3 {
   cursor: pointer;
   display: flex;
@@ -164,6 +211,7 @@ nav {
   border-radius: 50px;
   box-shadow: 6px 6px 20px #757575;
   z-index: 1;
+  outline: 0;
 }
 @media screen and (min-width: 768px) and (max-width: 1022px) {
   .desc_restaurant_p3 {
@@ -171,6 +219,12 @@ nav {
     margin-top: 12%;
     width: 80%;
     height: 80px;
+    outline: 0;
+  }
+}
+@media screen and (min-width: 1022px) {
+  .desc_restaurant_p3 {
+    width: 350px;
   }
 }
 .desc_restaurant_p3:hover::after {
@@ -178,6 +232,7 @@ nav {
 }
 .desc_restaurant_p3::after {
   content: "";
+  outline: 0;
   position: absolute;
   width: 70%;
   height: 65px;
@@ -193,6 +248,12 @@ nav {
     font-size: 1.8rem;
     width: 80%;
     height: 80px;
+    outline: 0;
+  }
+}
+@media screen and (min-width: 1022px) {
+  .desc_restaurant_p3::after {
+    width: 350px;
   }
 }
 
@@ -211,6 +272,11 @@ nav {
 @media screen and (min-width: 768px) and (max-width: 1022px) {
   .menu_titre {
     font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1022px) {
+  .menu_titre {
+    margin-left: 0;
   }
 }
 .menu_number {
@@ -235,6 +301,15 @@ nav {
     height: 50px;
   }
 }
+@media screen and (min-width: 1022px) {
+  .menu_number {
+    font-size: 2rem;
+    top: 68px;
+    left: 580px;
+    width: 50px;
+    height: 50px;
+  }
+}
 .menu_bloc {
   display: flex;
   align-items: center;
@@ -246,6 +321,11 @@ nav {
   box-shadow: 6px 6px 20px #dbdbdb;
   font-size: 1rem;
   margin-left: 0;
+}
+@media screen and (min-width: 1022px) {
+  .menu_bloc {
+    width: 30%;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1022px) {
   .menu_bloc {
@@ -264,9 +344,19 @@ nav {
   margin-left: 12%;
   color: #a3a3a3;
 }
+@media screen and (min-width: 1022px) {
+  .fa-mobile-alt, .fa-ellipsis-v, .fa-store {
+    font-size: 2rem;
+  }
+}
 
 .fa-bars {
   color: #a3a3a3;
+}
+@media screen and (min-width: 1022px) {
+  .fa-bars {
+    font-size: 2rem;
+  }
 }
 
 .fa-store {
@@ -280,6 +370,14 @@ nav {
   background-color: whitesmoke;
   padding-bottom: 60px;
 }
+@media screen and (min-width: 1022px) {
+  .restaurant {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    justify-content: space-around;
+  }
+}
 .restaurant_title {
   align-self: flex-start;
   margin-left: 5%;
@@ -289,6 +387,13 @@ nav {
 @media screen and (min-width: 768px) and (max-width: 1022px) {
   .restaurant_title {
     font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1022px) {
+  .restaurant_title {
+    margin-left: 0;
+    padding-top: 20px;
+    width: 100%;
   }
 }
 .restaurant_box {
@@ -302,6 +407,12 @@ nav {
   text-decoration: none;
   color: #000;
   display: inline-block;
+}
+@media screen and (min-width: 1022px) {
+  .restaurant_box {
+    width: 45%;
+    height: 400px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1022px) {
   .restaurant_box {

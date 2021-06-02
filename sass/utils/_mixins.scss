@@ -9,6 +9,9 @@
     box-shadow: 6px 6px 20px lighten($color_grey, 40%);
     font-size:1rem;
     margin-left: 0;
+    @media screen and (min-width: 1022px){
+      width: 30%;
+   }
 }
 
 @mixin box{
@@ -22,6 +25,10 @@
     text-decoration: none;
     color: #000;
     display: inline-block;
+    @media screen and (min-width: 1022px){
+     width: 45%;
+     height:400px;
+   }
 }
 
 @mixin footer{
