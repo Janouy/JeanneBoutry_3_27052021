@@ -42,6 +42,7 @@ body {
   margin: 0;
   width: 100%;
   z-index: -1;
+  font-family: robotoregular, serif;
 }
 @media screen and (min-width: 1224px) {
   body {
@@ -98,11 +99,18 @@ header {
   }
 }
 
+.fa-arrow-left {
+  font-size: 1.3rem;
+  position: absolute;
+  top: 4%;
+  left: 3%;
+  color: #000;
+}
+
 /* fin header */
 /* début main */
 main {
   width: auto;
-  font-family: robotoregular, serif;
 }
 
 nav {
@@ -557,7 +565,7 @@ footer {
   font-family: robotoregular, serif;
 }
 footer .footer_title {
-  font-family: shrikhandregular;
+  font-family: shrikhandregular, serif;
   font-weight: lighter;
 }
 footer .fa-utensils, footer .fa-hands-helping {
@@ -580,7 +588,46 @@ footer #contact {
 
 /* fin footer */
 /* FIN PAGE ACCUEIL */
-/* DEBUT PAGE A LA FRANCAISE */
-/* FIN PAGE A LA FRANCAISE */
+/* DEBUT PAGE RESTAURANT */
+.bloc_resto_pict {
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -11;
+  margin-bottom: 20%;
+}
+.bloc_resto_pict_palette {
+  background-image: url("../../maquettes_ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+.bloc_resto_pict_francaise {
+  background-image: url("../../maquettes_ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+.bloc_resto_pict_note {
+  background-image: url("../../maquettes_ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+.bloc_resto_pict_delice {
+  background-image: url("../../maquettes_ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+.bloc_resto_pict_title {
+  z-index: 1;
+  background-color: whitesmoke;
+  font-size: 1.7rem;
+  padding-top: 8%;
+  padding-left: 4%;
+  padding-right: 25%;
+  height: 25%;
+  position: relative;
+  top: 210px;
+  border-radius: 30px 30px 0px 0px;
+  font-family: shrikhandregular, serif;
+  font-weight: lighter;
+}
+.bloc_resto_pict .fa-heart {
+  position: absolute;
+  top: 20px;
+  color: black;
+}
+
+/* FIN PAGE RESTAURANT */
 
 /*# sourceMappingURL=style.css.map */

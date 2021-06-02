@@ -8,6 +8,7 @@ body{
     margin:0;
     width: 100%;
     z-index: -1;
+    font-family: robotoregular, serif;
     @media screen and (min-width: 1224px){
         width: 90%;
         margin: auto;
@@ -57,16 +58,20 @@ body{
 header{
 @include header;
 }
+.fa-arrow-left{
 
+    font-size: 1.3rem;
+    position: absolute;
+    top: 4%;
+    left: 3%;
+    color: #000;
+}
 /* fin header */
 
 /* début main */
 main{
 
     width: auto;
-    font-family: robotoregular, serif;
-    
-    
 }
 
 
@@ -470,7 +475,12 @@ margin-bottom: 90px;
 /* fin footer */
 /* FIN PAGE ACCUEIL */
 
-/* DEBUT PAGE A LA FRANCAISE */
+/* DEBUT PAGE RESTAURANT */
+
+.bloc_resto{
+
+    @include bloc_resto;
+}
 
 
 
@@ -485,6 +495,4 @@ margin-bottom: 90px;
 
 
 
-
-
-/* FIN PAGE A LA FRANCAISE */
+/* FIN PAGE RESTAURANT */
