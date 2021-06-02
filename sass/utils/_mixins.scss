@@ -1,3 +1,26 @@
+@mixin header{
+  display: flex;
+  justify-content: center;
+@media screen and (min-width: 1224px){
+  justify-content: flex-start;
+  
+}
+}
+#logo{
+  
+  width: 60%;
+  margin: 5%;
+  margin-bottom:3%;
+  @media screen and (min-width: 1224px){
+      width: 400px;
+      margin-top: 2%;
+   }
+}
+
+
+
+
+
 @mixin blocs{
     display: flex;
     align-items: center;
@@ -9,7 +32,7 @@
     box-shadow: 6px 6px 20px lighten($color_grey, 40%);
     font-size:1rem;
     margin-left: 0;
-    @media screen and (min-width: 1022px){
+    @media screen and (min-width: 1224px){
       width: 30%;
    }
 }
@@ -25,9 +48,10 @@
     text-decoration: none;
     color: #000;
     display: inline-block;
-    @media screen and (min-width: 1022px){
+    @media screen and (min-width: 1224px){
      width: 45%;
      height:400px;
+     box-shadow: 6px 6px 20px lighten($color_grey, 40%);
    }
 }
 
@@ -50,4 +74,11 @@
       text-decoration: none;
       color: #fff;
     }
+
+    @media screen and (min-width: 768px) and (max-width: 1223px){
+      font-size: 2rem;
+  }
+  @media screen and (min-width: 1224px){
+      font-size: 2rem;
+  }
 }

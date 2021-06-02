@@ -3,12 +3,12 @@
 @import"./utils/mixins";
 @import"./utils/keyframes";
 
-
+/* DEBUT PAGE ACCUEIL */
 body{
     margin:0;
     width: 100%;
     z-index: -1;
-    @media screen and (min-width: 1022px){
+    @media screen and (min-width: 1224px){
         width: 90%;
         margin: auto;
        
@@ -22,11 +22,14 @@ body{
     width: 22%;
     position: absolute;
     top:50%;
-    left: 4%;
+    left: 18%;
     z-index: 3;
-    @media screen and (min-width: 1022px){
-        top:20%;
+    @media screen and (min-width: 768px) and (max-width: 1223px){
         left: 18%;
+    }
+    @media screen and (min-width: 1224px){
+        top:20%;
+        left: 20%;
     }
    
 }
@@ -35,11 +38,11 @@ body{
     
     animation: spin 3000ms;
     animation-fill-mode: forwards; 
-    font-size: 350px;
-    @media screen and (min-width: 768px) and (max-width: 1021px){
-        font-size: 700px;
+    font-size: 250px;
+    @media screen and (min-width: 768px) and (max-width: 1223px){
+        font-size: 500px;
     }
-   @media screen and (min-width: 1022px){
+   @media screen and (min-width: 1224px){
        font-size: 1200px;
    }
 }
@@ -52,22 +55,7 @@ body{
 /* début header */
 
 header{
-    display: flex;
-    justify-content: center;
-  @media screen and (min-width: 1022px){
-    justify-content: flex-start;
-    
- }
-}
-#logo{
-    
-    width: 60%;
-    margin: 5%;
-    margin-bottom:3%;
-    @media screen and (min-width: 1022px){
-        width: 400px;
-        margin-top: 2%;
-     }
+@include header;
 }
 
 /* fin header */
@@ -90,10 +78,11 @@ nav{
     height: 4em;
     box-shadow: 0px 6px 6px lighten($color_grey, 40%) inset;
     background-color: lighten($color_grey, 46%);
-    @media screen and (min-width: 768px) and (max-width: 1021px){
+    @media screen and (min-width: 768px) and (max-width: 1223px){
         height: 6em;
+       
     }
-    @media screen and (min-width: 1022px){
+    @media screen and (min-width: 1224px){
        height: 3em;
        width:30%;
        border-radius: 5px;
@@ -111,11 +100,12 @@ nav{
     font-size: 1.3rem;
     background-color: lighten($color_grey, 46%);
     margin-left: 8%;
-    @media screen and (min-width: 768px) and (max-width: 1021px){
+    @media screen and (min-width: 768px) and (max-width: 1223px){
         font-size: 2rem;
         margin-left: 5%;
+        width: 50%;
     }
-    @media screen and (min-width: 1022px){
+    @media screen and (min-width: 1224px){
         border-radius: 10px;
         width: 50%;
      }
@@ -126,9 +116,9 @@ nav{
 .fa-map-marker-alt{
  margin-left: 17%;
  font-size: 1.5em;
- @media screen and (min-width: 768px) and (max-width: 1021px){
+ @media screen and (min-width: 768px) and (max-width: 1223px){
     font-size:2em;
-    margin-left: 30%;
+    margin-left: 10%;
 }
  
 }
@@ -140,7 +130,7 @@ nav{
    align-items: center;
    padding-bottom: 20%;
    background-color: lighten($color_grey, 50%);
-   @media screen and (min-width: 1022px){
+   @media screen and (min-width: 1224px){
     flex-direction: row;
     justify-content: center;
     justify-content: space-around;
@@ -152,7 +142,7 @@ nav{
     font-weight: bold;
     font-size: 1.9rem;
     margin-top: 8%;
-    @media screen and (min-width: 768px) and (max-width: 1021px){
+    @media screen and (min-width: 768px) and (max-width: 1223px){
         font-size: 3rem;
     }
   
@@ -162,10 +152,10 @@ nav{
        color: darken($color_grey, 20%);
        font-size: 1.2rem;
        margin-top: 3%;
-       @media screen and (min-width: 768px) and (max-width: 1021px){
+       @media screen and (min-width: 768px) and (max-width: 1223px){
         font-size: 2rem; 
     }
-    @media screen and (min-width: 1022px){
+    @media screen and (min-width: 1224px){
        margin-top: 8%;
      }
    }
@@ -186,15 +176,16 @@ nav{
        box-shadow: 6px 6px 20px $color_grey;
        z-index:1;
        outline: 0;
-       @media screen and (min-width: 768px) and (max-width: 1021px){
+       @media screen and (min-width: 768px) and (max-width: 1223px){
         font-size: 1.8rem;
         margin-top: 12%;
         width: 80%;
        height: 80px;
-       outline: 0;
+       outline-style:none;
     }
-    @media screen and (min-width: 1022px){
+    @media screen and (min-width: 1224px){
         width: 350px;
+        outline-style:none;
      }
        &:hover{
         &::after{
@@ -203,7 +194,7 @@ nav{
     }
     &::after{
         content: "";
-        outline: 0;
+        outline-style:none;
         position: absolute;
         width: 70%;
         height: 65px;
@@ -213,14 +204,15 @@ nav{
         opacity:0;
         z-index:-1;
         transition: opacity 250ms;
-        @media screen and (min-width: 768px) and (max-width: 1021px){
+        @media screen and (min-width: 768px) and (max-width: 1223px){
             font-size: 1.8rem;
             width: 80%;
            height: 80px;
-           outline: 0;
+           outline-style:none;
     }
-    @media screen and (min-width: 1022px){
+    @media screen and (min-width: 1224px){
         width: 350px;
+        outline-style:none;
      }
 }
 }
@@ -239,12 +231,12 @@ margin-bottom: 90px;
   margin-left: 5%;
    font-size: 2rem;
    margin-bottom: 0;
-   @media screen and (min-width: 768px) and (max-width: 1021px){
+   @media screen and (min-width: 768px) and (max-width: 1223px){
     font-size: 2.5rem;
   }
-  @media screen and (min-width: 1022px){
+  @media screen and (min-width: 1224px){
     margin-left:0;
-   
+    margin-left: 2%;
  }
 
 }
@@ -262,23 +254,23 @@ margin-bottom: 90px;
     position: relative;
     top: 55px;
     left: 3%;
-    @media screen and (min-width: 768px) and (max-width: 1021px){
+    @media screen and (min-width: 768px) and (max-width: 1223px){
         font-size: 2.3rem;
         top: 90px;
         width: 50px;
          height: 50px;
     }
-    @media screen and (min-width: 1022px){
+    @media screen and (min-width: 1224px){
         font-size: 2rem;
         top: 68px;
-        left: 580px;
+        left: 34%;
         width: 50px;
         height: 50px;
      }
 }
 &_bloc{
 @include blocs;
-@media screen and (min-width: 768px) and (max-width: 1021px){
+@media screen and (min-width: 768px) and (max-width: 1223px){
     font-size: 2.3rem;
     height: 130px;
 }
@@ -296,7 +288,7 @@ margin-bottom: 90px;
 
     margin-left: 12%;
     color: lighten($color_grey, 18%);
-    @media screen and (min-width: 1022px){
+    @media screen and (min-width: 1224px){
         font-size: 2rem;
        
      }
@@ -304,7 +296,7 @@ margin-bottom: 90px;
 
 .fa-bars{
     color: lighten($color_grey, 18%);
-    @media screen and (min-width: 1022px){
+    @media screen and (min-width: 1224px){
         font-size: 2rem;
        
      }
@@ -322,7 +314,7 @@ margin-bottom: 90px;
     align-items: center;
     background-color: lighten($color_grey, 50%);
     padding-bottom: 60px;
-    @media screen and (min-width: 1022px){
+    @media screen and (min-width: 1224px){
         flex-direction: row;
         flex-wrap: wrap;
         border-radius: 15px;
@@ -334,19 +326,20 @@ margin-bottom: 90px;
         margin-left: 5%;
         padding-top: 40px;
         font-size: 2rem;
-        @media screen and (min-width: 768px) and (max-width: 1021px){
+        @media screen and (min-width: 768px) and (max-width: 1223px){
             font-size: 2.5rem;
         }
-        @media screen and (min-width: 1022px){
+        @media screen and (min-width: 1224px){
             margin-left:0;
             padding-top: 20px;
             width: 100%;
+            margin-left: 2%;
          }
     }
 
     &_box{
   @include box;
-  @media screen and (min-width: 768px) and (max-width: 1021px){
+  @media screen and (min-width: 768px) and (max-width: 1223px){
     
      height: 450px;
 }
@@ -373,10 +366,10 @@ margin-bottom: 90px;
            position: relative;
            top: 20px;
            right: 2%;
-           @media screen and (min-width: 768px) and (max-width: 1021px){
+           @media screen and (min-width: 768px) and (max-width: 1223px){
             font-size: 2rem;
         }
-        @media screen and (min-width: 1022px){
+        @media screen and (min-width: 1224px){
            font-size: 2rem;
          }
         }
@@ -405,12 +398,13 @@ margin-bottom: 90px;
     &_descr{
        
         display: flex;
+        justify-content: space-between;
         font-size: 1rem;
         padding-top: 3%;
-        @media screen and (min-width: 768px) and (max-width: 1021px){
+        @media screen and (min-width: 768px) and (max-width: 1223px){
             font-size: 2rem;
         }
-        @media screen and (min-width: 1022px){
+        @media screen and (min-width: 1224px){
            font-size: 1.8rem;
            justify-content: space-between;
          }
@@ -418,6 +412,10 @@ margin-bottom: 90px;
         &-name{
             margin-right: 40%;
             margin-left: 5%;
+            @media screen and (min-width: 1224px){
+                
+                margin-right: 10%;
+              }
         }
 }
 }
@@ -429,10 +427,22 @@ margin-bottom: 90px;
     right: 10%;
     margin-top: 2%;
     z-index: 1;
+    @media screen and (min-width: 1224px){
+        position: relative;
+       right: 20px;
+    }
    
 &:active{
     &.fa-heart-2{
         opacity:1;
+    }
+}
+
+@media screen and (min-width: 1224px){
+    &:hover{
+        &.fa-heart-2{
+            opacity:1;
+        }
     }
 }
  &-2{
@@ -443,7 +453,11 @@ margin-bottom: 90px;
      color:transparent;
      opacity:0;
      transition: opacity 300ms;
-   
+     @media screen and (min-width: 1224px){
+        position: relative;
+        right: 20px;
+        top: -59px;
+    }
  }
  } 
 /* fin main */
@@ -451,9 +465,26 @@ margin-bottom: 90px;
 /* début footer */
  footer{
  @include footer;
-     @media screen and (min-width: 768px) and (max-width: 1021px){
-            font-size: 2rem;
-           
-        }
+ 
   } 
 /* fin footer */
+/* FIN PAGE ACCUEIL */
+
+/* DEBUT PAGE A LA FRANCAISE */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FIN PAGE A LA FRANCAISE */
