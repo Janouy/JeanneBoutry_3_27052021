@@ -57,7 +57,7 @@ body {
   animation-fill-mode: forwards;
   font-size: 350px;
 }
-@media screen and (min-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1021px) {
   .fa-spinner {
     font-size: 700px;
   }
@@ -107,7 +107,7 @@ nav {
   box-shadow: 0px 6px 6px #dbdbdb inset;
   background-color: #eaeaea;
 }
-@media screen and (min-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1021px) {
   nav {
     height: 6em;
   }
@@ -130,7 +130,7 @@ nav {
   background-color: #eaeaea;
   margin-left: 8%;
 }
-@media screen and (min-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1021px) {
   #search {
     font-size: 2rem;
     margin-left: 5%;
@@ -147,7 +147,7 @@ nav {
   margin-left: 17%;
   font-size: 1.5em;
 }
-@media screen and (min-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1021px) {
   .fa-map-marker-alt {
     font-size: 2em;
     margin-left: 30%;
@@ -176,7 +176,7 @@ nav {
   font-size: 1.9rem;
   margin-top: 8%;
 }
-@media screen and (min-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1021px) {
   .desc_restaurant_p1 {
     font-size: 3rem;
   }
@@ -186,7 +186,7 @@ nav {
   font-size: 1.2rem;
   margin-top: 3%;
 }
-@media screen and (min-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1021px) {
   .desc_restaurant_p2 {
     font-size: 2rem;
   }
@@ -213,7 +213,7 @@ nav {
   z-index: 1;
   outline: 0;
 }
-@media screen and (min-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1021px) {
   .desc_restaurant_p3 {
     font-size: 1.8rem;
     margin-top: 12%;
@@ -243,7 +243,7 @@ nav {
   z-index: -1;
   transition: opacity 250ms;
 }
-@media screen and (min-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1021px) {
   .desc_restaurant_p3::after {
     font-size: 1.8rem;
     width: 80%;
@@ -269,7 +269,7 @@ nav {
   font-size: 2rem;
   margin-bottom: 0;
 }
-@media screen and (min-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1021px) {
   .menu_titre {
     font-size: 2.5rem;
   }
@@ -293,7 +293,7 @@ nav {
   top: 55px;
   left: 3%;
 }
-@media screen and (min-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1021px) {
   .menu_number {
     font-size: 2.3rem;
     top: 90px;
@@ -327,7 +327,7 @@ nav {
     width: 30%;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1021px) {
   .menu_bloc {
     font-size: 2.3rem;
     height: 130px;
@@ -384,7 +384,7 @@ nav {
   padding-top: 40px;
   font-size: 2rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1021px) {
   .restaurant_title {
     font-size: 2.5rem;
   }
@@ -414,7 +414,7 @@ nav {
     height: 400px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1021px) {
   .restaurant_box {
     height: 450px;
   }
@@ -442,7 +442,12 @@ nav {
   top: 20px;
   right: 2%;
 }
-@media screen and (min-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1021px) {
+  .restaurant_pict-new {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1022px) {
   .restaurant_pict-new {
     font-size: 2rem;
   }
@@ -468,9 +473,15 @@ nav {
   font-size: 1rem;
   padding-top: 3%;
 }
-@media screen and (min-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1021px) {
   .restaurant_descr {
     font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1022px) {
+  .restaurant_descr {
+    font-size: 1.8rem;
+    justify-content: space-between;
   }
 }
 .restaurant_descr-name {
@@ -495,7 +506,7 @@ nav {
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
-  transition: opacity 500ms;
+  transition: opacity 300ms;
 }
 
 /* fin main */
@@ -520,7 +531,7 @@ footer #contact {
   text-decoration: none;
   color: #fff;
 }
-@media screen and (min-width: 768px) and (max-width: 1022px) {
+@media screen and (min-width: 768px) and (max-width: 1021px) {
   footer {
     font-size: 2rem;
   }
