@@ -17,6 +17,68 @@
    }
 }
 
+@mixin button{
+
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  width: 70%;
+  height: 65px;
+  background: linear-gradient(to bottom, $color_secondary, $color_primary);
+  margin-top: 8%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: 6px 6px 20px $color_grey;
+  z-index:1;
+  outline: 0;
+  @media screen and (min-width: 768px) and (max-width: 1223px){
+   font-size: 1.8rem;
+   margin-top: 12%;
+   width: 80%;
+  height: 80px;
+  outline-style:none;
+}
+@media screen and (min-width: 1224px){
+   width: 350px;
+   outline-style:none;
+}
+  &:hover{
+   &::after{
+   opacity:1;
+   }
+}
+&::after{
+   content: "";
+   outline-style:none;
+   position: absolute;
+   width: 70%;
+   height: 65px;
+   background: linear-gradient(to bottom, lighten($color_secondary, 5%), lighten($color_primary, 5%));
+   box-shadow: 6px 6px 20px darken($color_grey,50%);
+   border-radius: 50px;
+   opacity:0;
+   z-index:-1;
+   transition: opacity 250ms;
+   @media screen and (min-width: 768px) and (max-width: 1223px){
+       font-size: 1.8rem;
+       width: 80%;
+      height: 80px;
+      outline-style:none;
+}
+@media screen and (min-width: 1224px){
+   width: 350px;
+   outline-style:none;
+}
+}
+
+
+
+}
+
+
 @mixin bloc_resto{
   
   &_pict{
@@ -24,7 +86,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index:-11;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
   &_palette{
     background-image: url("../../maquettes_ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   }
@@ -126,6 +188,81 @@ background-image: url("../../maquettes_ohmyfood/images/restaurants/louis-hansel-
 }
 
 @mixin menu_resto{
-
-
+display: flex;
+flex-direction: column;
+align-items:center;
+font-size: 1.2rem;
+background-color: lighten($color_grey, 50%);
+&_title{
+  font-weight: lighter;
+  font-size: 1rem;
+  padding-left: 5%;
+  align-self: flex-start;
+ 
+  &_line{
+    width: 45px;
+    margin-top: -8px;
+    margin-bottom: 15px;;
+    border: 2px $color_tertiary solid;
+    margin-left: 5%;
+    align-self: flex-start;
+  }
 }
+&_bloc{
+  display: flex;
+  align-items: center;
+  width: 95%;
+  height: 80px;
+  padding-left: 5px;
+  border-radius: 20px;
+  background-color: #fff;
+  margin-bottom: 5%;
+  &_box{
+    display:flex;
+    align-items: center;
+    width: 95%;
+    margin-left:3%;
+    &:active + .menu_resto_button{
+      animation: button 500ms;
+      animation-fill-mode: both;
+      & .fa-check-circle{
+        display: inline;
+        color: #fff;
+       animation: check 500ms 400ms;
+      }
+    }
+
+    &_name{
+      cursor:pointer;
+      width: 80%;
+      line-height: 25px;
+      transform-origin: left 50%;
+     
+      &:active{
+        animation: test 300ms;
+        animation-fill-mode: forwards;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+    &_price{
+      padding-top: 5%;
+      padding-left: 6%;
+    }
+  }
+  }
+  &_button{
+    z-index:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 20px 20px 0px;
+    background-color: #99E2D0;
+    & .fa-check-circle{
+      display: none;
+       font-size: 1.8rem;
+    }
+   }
+}
+
