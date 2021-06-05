@@ -415,15 +415,10 @@ margin-bottom: 90px;
  } 
 /* fin main */
 
-/* début footer */
- footer{
- @include footer;
- 
-  } 
-/* fin footer */
+
 /* FIN PAGE ACCUEIL */
 
-/* DEBUT PAGE RESTAURANT */
+/* DEBUT PAGES RESTAURANTS */
 
 .bloc_resto{
 
@@ -435,8 +430,6 @@ margin-bottom: 90px;
     
 }
 
-
-
 .order{
     display: flex;
     justify-content: center;
@@ -444,6 +437,7 @@ margin-bottom: 90px;
     background-color: lighten($color_grey, 50%);
 }
 
+/* FIN PAGES RESTAURANTS */
 
 
 
@@ -451,8 +445,11 @@ margin-bottom: 90px;
 
 
 
+/* début footer */
+footer{
+    @include footer;
+    
+     } 
+   /* fin footer */
 
 
-
-
-/* FIN PAGE RESTAURANT */

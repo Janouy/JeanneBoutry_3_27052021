@@ -12,6 +12,7 @@
   font-weight: normal;
   font-style: normal;
 }
+/* DEBUT PAGE ACCUEIL */
 #logo {
   width: 60%;
   margin: 5%;
@@ -24,6 +25,11 @@
   }
 }
 
+/* FIN PAGE ACCUEIL */
+/* DEBUT PAGES RESTAURANTS */
+/* FIN PAGES RESTAURANTS */
+/* début bloc footer */
+/* fin bloc footer */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -39,20 +45,43 @@
 }
 @keyframes button {
   0% {
-    transform: translateX(999px);
+    transform: scaleX(0);
   }
   100% {
-    transform: translateX(0px);
+    transform: scaleX(80px);
     width: 80px;
     height: 100%;
   }
 }
-@keyframes test {
+@media screen and (min-width: 768px) and (max-width: 1223px) {
+  @keyframes button {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(150px);
+      width: 150px;
+      height: 100%;
+    }
+  }
+}
+@keyframes description {
   0% {
-    width: 80%;
+    width: 310px;
   }
   100% {
-    width: 75%;
+    width: 250px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1223px) {
+  @keyframes description {
+    0% {
+      width: 800px;
+    }
+    100% {
+      width: 750px;
+      transform: scaleX(80px);
+    }
   }
 }
 @keyframes check {
@@ -61,6 +90,19 @@
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+@keyframes bloc_menu {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 /* DEBUT PAGE ACCUEIL */
@@ -366,6 +408,11 @@ nav {
   font-size: 1rem;
   margin-left: 0;
 }
+@media screen and (min-width: 768px) and (max-width: 1223px) {
+  .menu_bloc {
+    font-size: 3rem;
+  }
+}
 @media screen and (min-width: 1224px) {
   .menu_bloc {
     width: 30%;
@@ -580,6 +627,200 @@ nav {
 }
 
 /* fin main */
+/* FIN PAGE ACCUEIL */
+/* DEBUT PAGES RESTAURANTS */
+.bloc_resto_pict {
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+@media screen and (min-width: 1224px) {
+  .bloc_resto_pict {
+    height: 550px;
+    margin-bottom: 0%;
+  }
+}
+.bloc_resto_pict_palette {
+  background-image: url("../../maquettes_ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+.bloc_resto_pict_francaise {
+  background-image: url("../../maquettes_ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+.bloc_resto_pict_note {
+  background-image: url("../../maquettes_ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+.bloc_resto_pict_delice {
+  background-image: url("../../maquettes_ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+.bloc_resto_pict_title {
+  z-index: 1;
+  background-color: whitesmoke;
+  font-size: 1.7rem;
+  padding-top: 8%;
+  padding-left: 4%;
+  padding-right: 25%;
+  height: 25%;
+  position: relative;
+  top: 157px;
+  border-radius: 30px 30px 0px 0px;
+  font-family: shrikhandregular, serif;
+  font-weight: lighter;
+}
+@media screen and (min-width: 768px) and (max-width: 1223px) {
+  .bloc_resto_pict_title {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .bloc_resto_pict_title {
+    font-size: 3rem;
+    bottom: 0;
+  }
+}
+.bloc_resto_pict .fa-heart {
+  position: absolute;
+  top: 20px;
+  color: black;
+}
+
+.menu_resto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+}
+@media screen and (min-width: 1224px) {
+  .menu_resto {
+    margin-top: 0;
+  }
+}
+.menu_resto_title {
+  font-weight: lighter;
+  font-size: 1rem;
+  padding-left: 5%;
+  align-self: flex-start;
+}
+@media screen and (min-width: 768px) and (max-width: 1223px) {
+  .menu_resto_title {
+    font-size: 2rem;
+    padding-left: 3%;
+  }
+}
+.menu_resto_title_line {
+  width: 45px;
+  margin-top: -8px;
+  margin-bottom: 15px;
+  border: 2px #99E2D0 solid;
+  margin-left: 5%;
+  align-self: flex-start;
+}
+@media screen and (min-width: 768px) and (max-width: 1223px) {
+  .menu_resto_title_line {
+    margin-top: -20px;
+    width: 80px;
+    margin-left: 3%;
+  }
+}
+.menu_resto_bloc {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  width: 95%;
+  height: 80px;
+  border-radius: 20px;
+  background-color: #fff;
+  margin-bottom: 5%;
+  border: 1px solid black;
+}
+@media screen and (min-width: 768px) and (max-width: 1223px) {
+  .menu_resto_bloc {
+    font-size: 1.8rem;
+    height: 150px;
+    line-height: 55px;
+  }
+}
+.menu_resto_bloc-1 {
+  animation: bloc_menu 1000ms;
+  animation-fill-mode: backwards;
+}
+.menu_resto_bloc-2 {
+  animation: bloc_menu 1000ms 500ms;
+  animation-fill-mode: backwards;
+}
+.menu_resto_bloc-3 {
+  animation: bloc_menu 1000ms 1000ms;
+  animation-fill-mode: backwards;
+}
+.menu_resto_bloc_box {
+  display: flex;
+  align-items: flex-end;
+  width: 95%;
+  margin-left: 1%;
+  border: 1px solid green;
+}
+.menu_resto_bloc_box:active + .menu_resto_button {
+  animation: button 500ms;
+  animation-fill-mode: both;
+}
+.menu_resto_bloc_box:active + .menu_resto_button .fa-check-circle {
+  display: inline;
+  color: #fff;
+  animation: check 500ms 400ms;
+}
+.menu_resto_bloc_box_name {
+  cursor: pointer;
+  width: 310px;
+  transform-origin: left 50%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 1px solid red;
+}
+@media screen and (min-width: 768px) and (max-width: 1223px) {
+  .menu_resto_bloc_box_name {
+    width: 800px;
+  }
+}
+.menu_resto_bloc_box_name:active {
+  animation: description 300ms;
+  animation-fill-mode: forwards;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menu_resto_bloc_box_price {
+  margin-left: 0%;
+  border: 1px solid blue;
+}
+.menu_resto_button {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 20px 20px 0px;
+  background-color: #99E2D0;
+  transform-origin: right 50%;
+  border: 1px solid yellow;
+}
+.menu_resto_button .fa-check-circle {
+  display: none;
+  font-size: 1.8rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1223px) {
+  .menu_resto_button .fa-check-circle {
+    font-size: 3.5rem;
+  }
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15%;
+  background-color: whitesmoke;
+}
+
+/* FIN PAGES RESTAURANTS */
 /* début footer */
 footer {
   background-color: #424242;
@@ -613,130 +854,5 @@ footer #contact {
 }
 
 /* fin footer */
-/* FIN PAGE ACCUEIL */
-/* DEBUT PAGE RESTAURANT */
-.bloc_resto_pict {
-  height: 250px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -11;
-  margin-bottom: 10%;
-}
-.bloc_resto_pict_palette {
-  background-image: url("../../maquettes_ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-}
-.bloc_resto_pict_francaise {
-  background-image: url("../../maquettes_ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-}
-.bloc_resto_pict_note {
-  background-image: url("../../maquettes_ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-}
-.bloc_resto_pict_delice {
-  background-image: url("../../maquettes_ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-}
-.bloc_resto_pict_title {
-  z-index: 1;
-  background-color: whitesmoke;
-  font-size: 1.7rem;
-  padding-top: 8%;
-  padding-left: 4%;
-  padding-right: 25%;
-  height: 25%;
-  position: relative;
-  top: 210px;
-  border-radius: 30px 30px 0px 0px;
-  font-family: shrikhandregular, serif;
-  font-weight: lighter;
-}
-.bloc_resto_pict .fa-heart {
-  position: absolute;
-  top: 20px;
-  color: black;
-}
-
-.menu_resto {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1.2rem;
-  background-color: whitesmoke;
-}
-.menu_resto_title {
-  font-weight: lighter;
-  font-size: 1rem;
-  padding-left: 5%;
-  align-self: flex-start;
-}
-.menu_resto_title_line {
-  width: 45px;
-  margin-top: -8px;
-  margin-bottom: 15px;
-  border: 2px #99E2D0 solid;
-  margin-left: 5%;
-  align-self: flex-start;
-}
-.menu_resto_bloc {
-  display: flex;
-  align-items: center;
-  width: 95%;
-  height: 80px;
-  padding-left: 5px;
-  border-radius: 20px;
-  background-color: #fff;
-  margin-bottom: 5%;
-}
-.menu_resto_bloc_box {
-  display: flex;
-  align-items: center;
-  width: 95%;
-  margin-left: 3%;
-}
-.menu_resto_bloc_box:active + .menu_resto_button {
-  animation: button 500ms;
-  animation-fill-mode: both;
-}
-.menu_resto_bloc_box:active + .menu_resto_button .fa-check-circle {
-  display: inline;
-  color: #fff;
-  animation: check 500ms 400ms;
-}
-.menu_resto_bloc_box_name {
-  cursor: pointer;
-  width: 80%;
-  line-height: 25px;
-  transform-origin: left 50%;
-}
-.menu_resto_bloc_box_name:active {
-  animation: test 300ms;
-  animation-fill-mode: forwards;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.menu_resto_bloc_box_price {
-  padding-top: 5%;
-  padding-left: 6%;
-}
-.menu_resto_button {
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0px 20px 20px 0px;
-  background-color: #99E2D0;
-}
-.menu_resto_button .fa-check-circle {
-  display: none;
-  font-size: 1.8rem;
-}
-
-.order {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 15%;
-  background-color: whitesmoke;
-}
-
-/* FIN PAGE RESTAURANT */
 
 /*# sourceMappingURL=style.css.map */

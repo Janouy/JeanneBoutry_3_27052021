@@ -1,3 +1,5 @@
+/* DEBUT PAGE ACCUEIL */
+
 @mixin header{
   display: flex;
   justify-content: center;
@@ -73,11 +75,11 @@
    outline-style:none;
 }
 }
-
-
-
 }
+/* FIN PAGE ACCUEIL */
 
+
+/* DEBUT PAGES RESTAURANTS */
 
 @mixin bloc_resto{
   
@@ -85,8 +87,12 @@
     height: 250px;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index:-11;
-    margin-bottom: 10%;
+    z-index:-1;
+
+    @media screen and (min-width: 1224px){
+      height: 550px;
+      margin-bottom: 0%;
+   }
   &_palette{
     background-image: url("../../maquettes_ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   }
@@ -108,22 +114,30 @@ background-image: url("../../maquettes_ohmyfood/images/restaurants/louis-hansel-
     padding-right: 25%;
     height:25%;
     position:relative;
-    top: 210px;
+    top: 157px;
     border-radius: 30px 30px 0px 0px;
     font-family: shrikhandregular, serif;
     font-weight: lighter;
+    
+    @media screen and (min-width: 768px) and (max-width: 1223px){
+      font-size: 3rem;
+      }
+  @media screen and (min-width: 1224px){
+    font-size: 3rem;
+    bottom:0;
+    
+    
+ }
   }
   & .fa-heart{
   position: absolute;
   top: 20px;
   color: black;
   
-   
   }
+
 }
 }
-
-
 
 @mixin blocs{
     display: flex;
@@ -136,6 +150,10 @@ background-image: url("../../maquettes_ohmyfood/images/restaurants/louis-hansel-
     box-shadow: 6px 6px 20px lighten($color_grey, 40%);
     font-size:1rem;
     margin-left: 0;
+    @media screen and (min-width: 768px) and (max-width: 1223px){
+      font-size: 3rem;
+     
+    }
     @media screen and (min-width: 1224px){
       width: 30%;
    }
@@ -159,99 +177,119 @@ background-image: url("../../maquettes_ohmyfood/images/restaurants/louis-hansel-
    }
 }
 
-@mixin footer{
-    background-color: darken($color_grey, 20%);
-    color: #fff;
-    font-size: 1rem;
-    margin-top: 0;
-    border: 2px darken($color_grey, 20%) solid;
-    padding-left: 5%;
-    font-family: robotoregular, serif;
-    .footer_title{
-      font-family: shrikhandregular, serif;
-      font-weight:lighter;
-    }
-    .fa-utensils, .fa-hands-helping{
-      margin-right: 2%;
-    }
-    #contact{
-      text-decoration: none;
-      color: #fff;
-    }
-
-    @media screen and (min-width: 768px) and (max-width: 1223px){
-      font-size: 2rem;
-  }
-  @media screen and (min-width: 1224px){
-      font-size: 2rem;
-  }
-}
 
 @mixin menu_resto{
 display: flex;
 flex-direction: column;
 align-items:center;
-font-size: 1.2rem;
 background-color: lighten($color_grey, 50%);
+@media screen and (min-width: 1224px){
+ margin-top: 0;
+}
 &_title{
   font-weight: lighter;
   font-size: 1rem;
   padding-left: 5%;
   align-self: flex-start;
+  @media screen and (min-width: 768px) and (max-width: 1223px){
+    font-size: 2rem;
+    padding-left:3%;
+}
  
   &_line{
     width: 45px;
     margin-top: -8px;
-    margin-bottom: 15px;;
+    margin-bottom: 15px;
     border: 2px $color_tertiary solid;
     margin-left: 5%;
     align-self: flex-start;
+    @media screen and (min-width: 768px) and (max-width: 1223px){
+      margin-top: -20px;
+      width: 80px;
+      margin-left: 3%;
+  }
   }
 }
 &_bloc{
   display: flex;
   align-items: center;
+  font-size: 1rem;
   width: 95%;
   height: 80px;
-  padding-left: 5px;
   border-radius: 20px;
   background-color: #fff;
   margin-bottom: 5%;
+  border: 1px solid black;
+  @media screen and (min-width: 768px) and (max-width: 1223px){
+    font-size: 1.8rem;
+    height: 150px;
+    line-height: 55px;
+    
+}
+  &-1{
+    
+    animation: bloc_menu 1000ms;
+    animation-fill-mode: backwards;
+  }
+  &-2{
+    
+    animation: bloc_menu 1000ms 500ms;
+    animation-fill-mode: backwards;
+  }
+  &-3{
+    
+    animation: bloc_menu 1000ms 1000ms;
+    animation-fill-mode: backwards;
+  }
+
   &_box{
     display:flex;
-    align-items: center;
+    align-items: flex-end;
     width: 95%;
-    margin-left:3%;
+    margin-left:1%;
+    border: 1px solid green;
     &:active + .menu_resto_button{
       animation: button 500ms;
       animation-fill-mode: both;
-      & .fa-check-circle{
+     & .fa-check-circle{
         display: inline;
         color: #fff;
        animation: check 500ms 400ms;
+       
       }
     }
 
     &_name{
       cursor:pointer;
-      width: 80%;
-      line-height: 25px;
+      width: 310px;
       transform-origin: left 50%;
-     
+      text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        border: 1px solid red;
+        @media screen and (min-width: 768px) and (max-width: 1223px){
+          width: 800px;
+      }
       &:active{
-        animation: test 300ms;
+        animation: description 300ms;
         animation-fill-mode: forwards;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
       }
+   
     }
     &_price{
-      padding-top: 5%;
-      padding-left: 6%;
+     margin-left: 0%;
+     border: 1px solid blue;
+     @media screen and (min-width: 768px) and (max-width: 1223px){
+      
+  }
     }
+  
   }
   }
+  
   &_button{
     z-index:1;
     display: flex;
@@ -259,10 +297,48 @@ background-color: lighten($color_grey, 50%);
     align-items: center;
     border-radius: 0px 20px 20px 0px;
     background-color: #99E2D0;
+    transform-origin: right 50%;
+    border: 1px solid yellow;
     & .fa-check-circle{
       display: none;
        font-size: 1.8rem;
+       @media screen and (min-width: 768px) and (max-width: 1223px){
+        font-size:3.5rem;
+    }
     }
    }
 }
 
+/* FIN PAGES RESTAURANTS */
+
+/* début bloc footer */
+
+@mixin footer{
+  background-color: darken($color_grey, 20%);
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 0;
+  border: 2px darken($color_grey, 20%) solid;
+  padding-left: 5%;
+  font-family: robotoregular, serif;
+  .footer_title{
+    font-family: shrikhandregular, serif;
+    font-weight:lighter;
+  }
+  .fa-utensils, .fa-hands-helping{
+    margin-right: 2%;
+  }
+  #contact{
+    text-decoration: none;
+    color: #fff;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1223px){
+    font-size: 2rem;
+}
+@media screen and (min-width: 1224px){
+    font-size: 2rem;
+}
+}
+
+/* fin bloc footer */
