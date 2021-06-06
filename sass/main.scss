@@ -10,27 +10,25 @@ body{
     z-index: -1;
     font-family: robotoregular, serif;
     @media screen and (min-width: 1024px){
-        width: 90%;
         margin: auto;
-       
      }
 }
 
 /* début loading_spinner */
 
 .loading_spinner{
-
-    width: 22%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     position: absolute;
     top:50%;
-    left: 18%;
     z-index: 3;
     @media screen and (min-width: 768px) and (max-width: 1023px){
-        left: 20%;
+        
     }
     @media screen and (min-width: 1024px){
         top:20%;
-        left: 20%;
+        
     }
    
 }
@@ -40,11 +38,12 @@ body{
     animation: spin 3000ms;
     animation-fill-mode: forwards; 
     font-size: 250px;
+    align-items: center;
     @media screen and (min-width: 768px) and (max-width: 1023px){
         font-size: 500px;
     }
    @media screen and (min-width: 1024px){
-       font-size: 1200px;
+       font-size: 800px;
    }
 }
 
@@ -65,6 +64,10 @@ header{
     top: 4%;
     left: 3%;
     color: #000;
+    @media screen and (min-width: 1024px){
+      top: 7%;
+      left: 2%;
+     }
 }
 /* fin header */
 

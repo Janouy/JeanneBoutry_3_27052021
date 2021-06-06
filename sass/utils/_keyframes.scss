@@ -65,12 +65,12 @@
 
       @keyframes description{
         0%{
-          width: 310px;
+          width: 85%;
       }
       
      
         100%{
-        width: 250px;
+        width: 75%;
         
         }
       }
@@ -78,12 +78,12 @@
       @media screen and (min-width: 768px) and (max-width: 1023px){
         @keyframes description{
           0%{
-            width: 640px;
+            width: 90%;
         }
         
        
           100%{
-          width: 550px;
+          width: 80%;
           
           }
         }
@@ -97,7 +97,7 @@
         
        
           100%{
-          width: 50%;
+          width: 80%;
           
           }
         }

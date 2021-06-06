@@ -195,6 +195,7 @@ align-items:center;
 background-color: lighten($color_grey, 50%);
 @media screen and (min-width: 768px) and (max-width: 1023px){
  padding-top:5%;
+ margin-top: -1%;
 }
 @media screen and (min-width: 1024px){
  margin-top: 0;
@@ -303,13 +304,13 @@ background-color: lighten($color_grey, 50%);
 
     &_name{
       cursor:pointer;
-      width: 310px;
+      width: 85%;
       transform-origin: left 50%;
       text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
         @media screen and (min-width: 768px) and (max-width: 1023px){
-          width: 640px;
+          width: 90%;
       }
       @media screen and (min-width: 1024px){
        width: 90%;

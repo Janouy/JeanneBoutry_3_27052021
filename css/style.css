@@ -79,19 +79,19 @@
 }
 @keyframes description {
   0% {
-    width: 310px;
+    width: 85%;
   }
   100% {
-    width: 250px;
+    width: 75%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   @keyframes description {
     0% {
-      width: 640px;
+      width: 90%;
     }
     100% {
-      width: 550px;
+      width: 80%;
     }
   }
 }
@@ -101,7 +101,7 @@
       width: 90%;
     }
     100% {
-      width: 50%;
+      width: 80%;
     }
   }
 }
@@ -138,28 +138,22 @@ body {
 }
 @media screen and (min-width: 1024px) {
   body {
-    width: 90%;
     margin: auto;
   }
 }
 
 /* début loading_spinner */
 .loading_spinner {
-  width: 22%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   position: absolute;
   top: 50%;
-  left: 18%;
   z-index: 3;
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .loading_spinner {
-    left: 20%;
-  }
 }
 @media screen and (min-width: 1024px) {
   .loading_spinner {
     top: 20%;
-    left: 20%;
   }
 }
 
@@ -167,6 +161,7 @@ body {
   animation: spin 3000ms;
   animation-fill-mode: forwards;
   font-size: 250px;
+  align-items: center;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .fa-spinner {
@@ -175,7 +170,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .fa-spinner {
-    font-size: 1200px;
+    font-size: 800px;
   }
 }
 
@@ -197,6 +192,12 @@ header {
   top: 4%;
   left: 3%;
   color: #000;
+}
+@media screen and (min-width: 1024px) {
+  .fa-arrow-left {
+    top: 7%;
+    left: 2%;
+  }
 }
 
 /* fin header */
@@ -731,6 +732,7 @@ nav {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .menu_resto {
     padding-top: 5%;
+    margin-top: -1%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -848,7 +850,7 @@ nav {
 }
 .menu_resto_bloc_box_name {
   cursor: pointer;
-  width: 310px;
+  width: 85%;
   transform-origin: left 50%;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -856,7 +858,7 @@ nav {
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .menu_resto_bloc_box_name {
-    width: 640px;
+    width: 90%;
   }
 }
 @media screen and (min-width: 1024px) {
