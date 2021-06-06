@@ -3,7 +3,7 @@
 @mixin header{
   display: flex;
   justify-content: center;
-@media screen and (min-width: 1224px){
+@media screen and (min-width: 1024px){
   justify-content: flex-start;
   
 }
@@ -13,7 +13,7 @@
   width: 60%;
   margin: 5%;
   margin-bottom:3%;
-  @media screen and (min-width: 1224px){
+  @media screen and (min-width: 1024px){
       width: 400px;
       margin-top: 2%;
    }
@@ -36,14 +36,14 @@
   box-shadow: 6px 6px 20px $color_grey;
   z-index:1;
   outline: 0;
-  @media screen and (min-width: 768px) and (max-width: 1223px){
+  @media screen and (min-width: 768px) and (max-width: 1023px){
    font-size: 1.8rem;
    margin-top: 12%;
    width: 80%;
   height: 80px;
   outline-style:none;
 }
-@media screen and (min-width: 1224px){
+@media screen and (min-width: 1024px){
    width: 350px;
    outline-style:none;
 }
@@ -64,13 +64,13 @@
    opacity:0;
    z-index:-1;
    transition: opacity 250ms;
-   @media screen and (min-width: 768px) and (max-width: 1223px){
+   @media screen and (min-width: 768px) and (max-width: 1023px){
        font-size: 1.8rem;
        width: 80%;
       height: 80px;
       outline-style:none;
 }
-@media screen and (min-width: 1224px){
+@media screen and (min-width: 1024px){
    width: 350px;
    outline-style:none;
 }
@@ -82,58 +82,68 @@
 /* DEBUT PAGES RESTAURANTS */
 
 @mixin bloc_resto{
-  
+ 
   &_pict{
-    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 70%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     z-index:-1;
-
-    @media screen and (min-width: 1224px){
-      height: 550px;
-      margin-bottom: 0%;
+    @media screen and (min-width: 768px) and (max-width: 1023px){
+     height: 700px;
+      }
+    @media screen and (min-width: 1024px){
+    height:800px;
    }
   &_palette{
     background-image: url("../../maquettes_ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    
   }
   &_francaise{
 background-image: url("../../maquettes_ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+background-position-x: 20%;
+background-position-y: 50%;
   }
   &_note{
 background-image: url("../../maquettes_ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+
   }
   &_delice{
 background-image: url("../../maquettes_ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+
   }
   &_title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     z-index:1;
     background-color: lighten($color_grey, 50%);
     font-size: 1.7rem;
-    padding-top: 8%;
     padding-left: 4%;
     padding-right: 25%;
-    height:25%;
-    position:relative;
-    top: 157px;
-    border-radius: 30px 30px 0px 0px;
+    height:35%;
+    border-radius: 50px 50px 0px 0px;
     font-family: shrikhandregular, serif;
     font-weight: lighter;
-    
-    @media screen and (min-width: 768px) and (max-width: 1223px){
+    @media screen and (min-width: 768px) and (max-width: 1023px){
       font-size: 3rem;
+      height:30%;
       }
-  @media screen and (min-width: 1224px){
+  @media screen and (min-width: 1024px){
     font-size: 3rem;
-    bottom:0;
-    
-    
+   height:30%;
+   padding-right: 10%;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
  }
   }
   & .fa-heart{
-  position: absolute;
-  top: 20px;
-  color: black;
-  
+    padding-bottom:5%;
+     color: black;
   }
 
 }
@@ -150,11 +160,11 @@ background-image: url("../../maquettes_ohmyfood/images/restaurants/louis-hansel-
     box-shadow: 6px 6px 20px lighten($color_grey, 40%);
     font-size:1rem;
     margin-left: 0;
-    @media screen and (min-width: 768px) and (max-width: 1223px){
+    @media screen and (min-width: 768px) and (max-width: 1023px){
       font-size: 3rem;
      
     }
-    @media screen and (min-width: 1224px){
+    @media screen and (min-width: 1024px){
       width: 30%;
    }
 }
@@ -170,7 +180,7 @@ background-image: url("../../maquettes_ohmyfood/images/restaurants/louis-hansel-
     text-decoration: none;
     color: #000;
     display: inline-block;
-    @media screen and (min-width: 1224px){
+    @media screen and (min-width: 1024px){
      width: 45%;
      height:400px;
      box-shadow: 6px 6px 20px lighten($color_grey, 40%);
@@ -183,7 +193,10 @@ display: flex;
 flex-direction: column;
 align-items:center;
 background-color: lighten($color_grey, 50%);
-@media screen and (min-width: 1224px){
+@media screen and (min-width: 768px) and (max-width: 1023px){
+ padding-top:5%;
+}
+@media screen and (min-width: 1024px){
  margin-top: 0;
 }
 &_title{
@@ -191,10 +204,13 @@ background-color: lighten($color_grey, 50%);
   font-size: 1rem;
   padding-left: 5%;
   align-self: flex-start;
-  @media screen and (min-width: 768px) and (max-width: 1223px){
+  @media screen and (min-width: 768px) and (max-width: 1023px){
     font-size: 2rem;
     padding-left:3%;
 }
+@media screen and (min-width: 1024px){
+  font-size: 2.5rem;
+ }
  
   &_line{
     width: 45px;
@@ -203,11 +219,15 @@ background-color: lighten($color_grey, 50%);
     border: 2px $color_tertiary solid;
     margin-left: 5%;
     align-self: flex-start;
-    @media screen and (min-width: 768px) and (max-width: 1223px){
+    @media screen and (min-width: 768px) and (max-width: 1023px){
       margin-top: -20px;
       width: 80px;
       margin-left: 3%;
   }
+  @media screen and (min-width: 1024px){
+    width: 120px;
+    margin-top: -30px;
+   }
   }
 }
 &_bloc{
@@ -219,13 +239,20 @@ background-color: lighten($color_grey, 50%);
   border-radius: 20px;
   background-color: #fff;
   margin-bottom: 5%;
-  border: 1px solid black;
-  @media screen and (min-width: 768px) and (max-width: 1223px){
+  box-shadow: 6px 6px 20px lighten($color_grey, 30%);
+  @media screen and (min-width: 768px) and (max-width: 1023px){
     font-size: 1.8rem;
     height: 150px;
     line-height: 55px;
-    
+    margin-top: 5%;
 }
+@media screen and (min-width: 1024px){
+  font-size: 2rem;
+  height: 200px;
+  line-height: 55px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+ }
   &-1{
     
     animation: bloc_menu 1000ms;
@@ -241,22 +268,37 @@ background-color: lighten($color_grey, 50%);
     animation: bloc_menu 1000ms 1000ms;
     animation-fill-mode: backwards;
   }
+  &-4{
+    
+    animation: bloc_menu 1000ms 1500ms;
+    animation-fill-mode: backwards;
+  }
 
   &_box{
     display:flex;
     align-items: flex-end;
     width: 95%;
     margin-left:1%;
-    border: 1px solid green;
     &:active + .menu_resto_button{
       animation: button 500ms;
       animation-fill-mode: both;
      & .fa-check-circle{
         display: inline;
         color: #fff;
-       animation: check 500ms 400ms;
-       
+       animation: check 500ms 300ms;
+     }
       }
+      @media screen and (min-width: 1024px){
+        &:hover + .menu_resto_button{
+          animation: button 500ms;
+          animation-fill-mode: both;
+         & .fa-check-circle{
+            display: inline;
+            color: #fff;
+           animation: check 500ms 300ms;
+           
+          }
+       }
     }
 
     &_name{
@@ -266,10 +308,13 @@ background-color: lighten($color_grey, 50%);
       text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        border: 1px solid red;
-        @media screen and (min-width: 768px) and (max-width: 1223px){
-          width: 800px;
+        @media screen and (min-width: 768px) and (max-width: 1023px){
+          width: 640px;
       }
+      @media screen and (min-width: 1024px){
+       width: 90%;
+       }
+      
       &:active{
         animation: description 300ms;
         animation-fill-mode: forwards;
@@ -281,9 +326,8 @@ background-color: lighten($color_grey, 50%);
     }
     &_price{
      margin-left: 0%;
-     border: 1px solid blue;
-     @media screen and (min-width: 768px) and (max-width: 1223px){
-      
+     @media screen and (min-width: 768px) and (max-width: 1023px){
+      margin-right:2%;
   }
     }
   
@@ -298,13 +342,15 @@ background-color: lighten($color_grey, 50%);
     border-radius: 0px 20px 20px 0px;
     background-color: #99E2D0;
     transform-origin: right 50%;
-    border: 1px solid yellow;
     & .fa-check-circle{
       display: none;
        font-size: 1.8rem;
-       @media screen and (min-width: 768px) and (max-width: 1223px){
+       @media screen and (min-width: 768px) and (max-width: 1023px){
         font-size:3.5rem;
     }
+    @media screen and (min-width: 1024px){
+      font-size:3.5rem;
+      }
     }
    }
 }
@@ -333,10 +379,10 @@ background-color: lighten($color_grey, 50%);
     color: #fff;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1223px){
+  @media screen and (min-width: 768px) and (max-width: 1023px){
     font-size: 2rem;
 }
-@media screen and (min-width: 1224px){
+@media screen and (min-width: 1024px){
     font-size: 2rem;
 }
 }

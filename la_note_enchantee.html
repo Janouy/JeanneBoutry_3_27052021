@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" media="screen and (min-width: 1224px)" href="./css/style.css" />
-    <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1223px)" href="./css/style.css" />
+    <link rel="stylesheet" media="screen and (min-width: 1024px)" href="./css/style.css" />
+    <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1023px)" href="./css/style.css" />
     <link rel="stylesheet" media="screen and (max-width: 767px)" href="./css/style.css" />
     <meta name="viewport" content="width=device-width">
     <script src=" https://kit.fontawesome.com/79802d727d.js" crossorigin="anonymous">
@@ -12,90 +12,130 @@
     <title>Ohmyfood</title>
 </head>
 
-
 <body>
     <header>
         <a href="index.html"> <i class="fas fa-arrow-left"></i> </a>
         <img src="maquettes_ohmyfood/images/logo/ohmyfood.png" alt="logo Ohmyfood" id="logo" />
+
     </header>
 
 
     <div class="bloc_resto">
         <div class="bloc_resto_pict bloc_resto_pict_note">
-            <div class="bloc_resto_pict bloc_resto_pict_title"> La note enchantée <i class="far fa-heart"></i></div>
+            <div class="bloc_resto_pict bloc_resto_pict_title"> La Note enchantée <i
+                    class="far fa-heart fa-heart-resto"></i></div>
         </div>
 
     </div>
 
-    <section>
-        <h2> ENTREES</h2>
 
-        <div>
-            <div> Ravioles de foie gras</div>
-            <div> Accompagnés de leur crème à la truffe</div>
-            <div> 25€</div>
+    <section class="menu_resto">
+        <h2 class="menu_resto_title"> ENTR&#201;ES</h2>
+        <div class="menu_resto_title_line"></div>
+
+        <div class="menu_resto_bloc menu_resto_bloc-1">
+            <div class="menu_resto_bloc_box ">
+                <div class="menu_resto_bloc_box_name"> <b>Ravioles de foie gras</b><br />
+                    Accompagnés de leur crème à la truffe </div>
+                <div class="menu_resto_bloc_box_price"><b> 25€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
         </div>
-        <div>
-            <div>Caviar osciètre </div>
-            <div> Sur blini à la farine de blé noir </div>
-            <div> 35€</div>
+
+        <div class="menu_resto_bloc menu_resto_bloc-2">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Caviar osciètre </b><br />
+                    Sur blini à la farine de blé noir </div>
+                <div class="menu_resto_bloc_box_price"><b> 35€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
         </div>
-        <div>
-            <div>Homard et espuma de potiron </div>
-            <div>Mariné aux zestes d'orange </div>
-            <div> 20€</div>
+        <div class="menu_resto_bloc menu_resto_bloc-3">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Homard et espuma de potiron </b><br />
+                    Mariné aux zestes d'orange </div>
+                <div class="menu_resto_bloc_box_price"><b> 20€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
         </div>
-        <div>
-            <div>Foie gras de canard cuit entier</div>
-            <div>Confiture de figue et pain toasté</div>
-            <div> 35€</div>
+        <div class="menu_resto_bloc menu_resto_bloc-4">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Foie gras de canard cuit entier </b><br />
+                    Confiture de figue et pain toasté </div>
+                <div class="menu_resto_bloc_box_price"><b> 35€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
+        </div>
+
+    </section>
+    <section class="menu_resto">
+        <h2 class="menu_resto_title"> PLATS</h2>
+        <div class="menu_resto_title_line"></div>
+
+        <div class="menu_resto_bloc menu_resto_bloc-1">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Noix de coquilles Saint-Jacques </b><br />
+                    Sur lit de purée de céleri-rave</div>
+                <div class="menu_resto_bloc_box_price"><b> 40€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
+        </div>
+
+        <div class="menu_resto_bloc menu_resto_bloc-2">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Langoustine poêlée </b><br />
+                    Purée de patate douce </div>
+                <div class="menu_resto_bloc_box_price"><b> 35€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
+        </div>
+        <div class="menu_resto_bloc menu_resto_bloc-3">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>FMijoté de queue de boeuf </b><br />
+                    Et riz sauvage aux zestes de citron</div>
+                <div class="menu_resto_bloc_box_price"><b> 44€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
+        </div>
+
+    </section>
+    <section class="menu_resto">
+        <h2 class="menu_resto_title"> DESSERTS</h2>
+        <div class="menu_resto_title_line"></div>
+
+        <div class="menu_resto_bloc menu_resto_bloc-1">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Macaron noisette et chocolat </b><br />
+                    Glace au caramel brun et sel de Guérande </div>
+                <div class="menu_resto_bloc_box_price"><b> 18€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
+        </div>
+
+        <div class="menu_resto_bloc menu_resto_bloc-2">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Baba au rhum revisité </b><br />
+                    Avec son coulis de citron </div>
+                <div class="menu_resto_bloc_box_price"><b> 22€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
+        </div>
+        <div class="menu_resto_bloc menu_resto_bloc-3">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Tarte au citron meringuée </b><br />
+                    Déstructurée </div>
+                <div class="menu_resto_bloc_box_price"><b> 23€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
         </div>
 
     </section>
 
-    <section>
-        <h2> PLATS</h2>
 
-        <div>
-            <div> Noix de coquilles Saint-Jacques</div>
-            <div> Sur lit de purée de céleri-rave</div>
-            <div> 40€</div>
-        </div>
-        <div>
-            <div> Langoustine poêlée</div>
-            <div>Purée de patate douce </div>
-            <div> 35€</div>
-        </div>
-        <div>
-            <div>Mijoté de queue de boeuf </div>
-            <div>Et riz sauvage aux zestes de citron </div>
-            <div> 44€</div>
-        </div>
+    <div class="order">
+        <div class="desc_restaurant_p3">Commander</div>
 
-    </section>
-
-    <section>
-        <h2> DESSERTS</h2>
-
-        <div>
-            <div>Macaron noisette et chocolat </div>
-            <div>Glace au caramel brun et sel de Guérande </div>
-            <div> 18€</div>
-        </div>
-        <div>
-            <div>Baba au rhum revisité </div>
-            <div>Avec son coulis de citron </div>
-            <div> 22€</div>
-        </div>
-        <div>
-            <div> Tarte au citron meringuée </div>
-            <div> Déstructurée</div>
-            <div> 23€</div>
-        </div>
-
-    </section>
-
-
+    </div>
     <footer>
         <h2 class="footer_title"> ohmyfood</h2>
         <p> <i class="fas fa-utensils"></i> Proposer un restaurant</p>
@@ -105,5 +145,6 @@
     </footer>
 
 </body>
+
 
 </html>

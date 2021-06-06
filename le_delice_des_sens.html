@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" media="screen and (min-width: 1224px)" href="./css/style.css" />
-    <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1223px)" href="./css/style.css" />
+    <link rel="stylesheet" media="screen and (min-width: 1024px)" href="./css/style.css" />
+    <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1023px)" href="./css/style.css" />
     <link rel="stylesheet" media="screen and (max-width: 767px)" href="./css/style.css" />
     <meta name="viewport" content="width=device-width">
     <script src=" https://kit.fontawesome.com/79802d727d.js" crossorigin="anonymous">
@@ -12,85 +12,122 @@
     <title>Ohmyfood</title>
 </head>
 
-
 <body>
     <header>
         <a href="index.html"> <i class="fas fa-arrow-left"></i> </a>
         <img src="maquettes_ohmyfood/images/logo/ohmyfood.png" alt="logo Ohmyfood" id="logo" />
+
     </header>
 
 
     <div class="bloc_resto">
         <div class="bloc_resto_pict bloc_resto_pict_delice">
-            <div class="bloc_resto_pict bloc_resto_pict_title"> Le délice des sens <i class="far fa-heart"></i></div>
+            <div class="bloc_resto_pict bloc_resto_pict_title"> Le délice des sens <i
+                    class="far fa-heart fa-heart-resto"></i></div>
         </div>
 
     </div>
 
-    <section>
-        <h2> ENTREES</h2>
 
-        <div>
-            <div> Tartare de thon</div>
-            <div> Assaisonné au yuzu</div>
-            <div> 25€</div>
+    <section class="menu_resto">
+        <h2 class="menu_resto_title"> ENTR&#201;ES</h2>
+        <div class="menu_resto_title_line"></div>
+
+        <div class="menu_resto_bloc menu_resto_bloc-1">
+            <div class="menu_resto_bloc_box ">
+                <div class="menu_resto_bloc_box_name"> <b>Tartare de thon </b><br />
+                    Assaisonné au yuzu </div>
+                <div class="menu_resto_bloc_box_price"><b> 25€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
         </div>
-        <div>
-            <div> Bouchée de homard croustillant</div>
-            <div> Et sa farandole de petits légumes </div>
-            <div> 35€</div>
+
+        <div class="menu_resto_bloc menu_resto_bloc-2">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Bouchée de homard croustillant </b><br />
+                    Et sa farandole de petits légumes </div>
+                <div class="menu_resto_bloc_box_price"><b> 35€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
         </div>
-        <div>
-            <div> Velouté de cèpes</div>
-            <div> Aux truffes</div>
-            <div> 20€</div>
+        <div class="menu_resto_bloc menu_resto_bloc-3">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Velouté de cèpes </b><br />
+                    Aux truffes </div>
+                <div class="menu_resto_bloc_box_price"><b> 20€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
+        </div>
+
+    </section>
+    <section class="menu_resto">
+        <h2 class="menu_resto_title"> PLATS</h2>
+        <div class="menu_resto_title_line"></div>
+
+        <div class="menu_resto_bloc menu_resto_bloc-1">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Poulet rôti aux herbes de Provence </b><br />
+                    Et sa crème de truffe</div>
+                <div class="menu_resto_bloc_box_price"><b> 40€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
+        </div>
+
+        <div class="menu_resto_bloc menu_resto_bloc-2">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Langouste rôtie </b><br />
+                    Et ses légumes de saison </div>
+                <div class="menu_resto_bloc_box_price"><b> 35€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
+        </div>
+        <div class="menu_resto_bloc menu_resto_bloc-3">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Côte de boeuf Angus </b><br />
+                    Et sa purée de panais </div>
+                <div class="menu_resto_bloc_box_price"><b> 44€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
+        </div>
+
+    </section>
+    <section class="menu_resto">
+        <h2 class="menu_resto_title"> DESSERTS</h2>
+        <div class="menu_resto_title_line"></div>
+
+        <div class="menu_resto_bloc menu_resto_bloc-1">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Farandole de desserts</b><br />
+                    Du chef </div>
+                <div class="menu_resto_bloc_box_price"><b> 18€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
+        </div>
+
+        <div class="menu_resto_bloc menu_resto_bloc-2">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>MCrème brulée </b><br />
+                    Revisitée </div>
+                <div class="menu_resto_bloc_box_price"><b> 22€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
+        </div>
+        <div class="menu_resto_bloc menu_resto_bloc-3">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Tiramisu </b><br />
+                    À la noisette </div>
+                <div class="menu_resto_bloc_box_price"><b> 23€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
         </div>
 
     </section>
 
-    <section>
-        <h2> PLATS</h2>
 
-        <div>
-            <div> Poulet rôti aux herbes de Provence </div>
-            <div>Et sa crème de truffe </div>
-            <div> 40€</div>
-        </div>
-        <div>
-            <div>Langouste rôtie </div>
-            <div>Et ses légumes de saison </div>
-            <div> 35€</div>
-        </div>
-        <div>
-            <div>Côte de boeuf Angus </div>
-            <div>Et sa purée de panais </div>
-            <div> 44€</div>
-        </div>
+    <div class="order">
+        <div class="desc_restaurant_p3">Commander</div>
 
-    </section>
-
-    <section>
-        <h2> DESSERTS</h2>
-
-        <div>
-            <div> Farandole de desserts</div>
-            <div>Du chef </div>
-            <div> 18€</div>
-        </div>
-        <div>
-            <div>Crème brulée </div>
-            <div>Revisitée </div>
-            <div> 22€</div>
-        </div>
-        <div>
-            <div>Tiramisu </div>
-            <div>À la noisette </div>
-            <div> 23€</div>
-        </div>
-
-    </section>
-
-
+    </div>
     <footer>
         <h2 class="footer_title"> ohmyfood</h2>
         <p> <i class="fas fa-utensils"></i> Proposer un restaurant</p>
@@ -100,5 +137,6 @@
     </footer>
 
 </body>
+
 
 </html>

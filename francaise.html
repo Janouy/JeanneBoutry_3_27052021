@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" media="screen and (min-width: 1224px)" href="./css/style.css" />
-    <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1223px)" href="./css/style.css" />
+    <link rel="stylesheet" media="screen and (min-width: 1024px)" href="./css/style.css" />
+    <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1023px)" href="./css/style.css" />
     <link rel="stylesheet" media="screen and (max-width: 767px)" href="./css/style.css" />
     <meta name="viewport" content="width=device-width">
     <script src=" https://kit.fontawesome.com/79802d727d.js" crossorigin="anonymous">
@@ -12,83 +12,122 @@
     <title>Ohmyfood</title>
 </head>
 
-
 <body>
     <header>
         <a href="index.html"> <i class="fas fa-arrow-left"></i> </a>
         <img src="maquettes_ohmyfood/images/logo/ohmyfood.png" alt="logo Ohmyfood" id="logo" />
+
     </header>
+
 
     <div class="bloc_resto">
         <div class="bloc_resto_pict bloc_resto_pict_francaise">
-            <div class="bloc_resto_pict bloc_resto_pict_title"> &Agrave; la française <i class="far fa-heart"></i></div>
+            <div class="bloc_resto_pict bloc_resto_pict_title"> &Agrave; la française <i
+                    class="far fa-heart fa-heart-resto"></i></div>
         </div>
+
     </div>
 
+
     <section class="menu_resto">
-        <h2> ENTREES</h2>
+        <h2 class="menu_resto_title"> ENTR&#201;ES</h2>
+        <div class="menu_resto_title_line"></div>
 
-        <div>
-            <div> Tartare de poulpe acidulé</div>
-            <div> Aux zestes d'orange </div>
-            <div> 25€</div>
+        <div class="menu_resto_bloc menu_resto_bloc-1">
+            <div class="menu_resto_bloc_box ">
+                <div class="menu_resto_bloc_box_name"> <b>Tartare de poulpe acidulé </b><br />
+                    Aux zestes d'orange </div>
+                <div class="menu_resto_bloc_box_price"><b> 25€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
         </div>
-        <div>
-            <div> Velouté de légumes d'antan</div>
-            <div> Carotte, panais, topinambour </div>
-            <div> 35€</div>
+
+        <div class="menu_resto_bloc menu_resto_bloc-2">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Velouté de légumes d'antan </b><br />
+                    Carotte, panais, topinambour</div>
+                <div class="menu_resto_bloc_box_price"><b> 35€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
         </div>
-        <div>
-            <div> Soupe à l'oignon</div>
-            <div> Revisitée</div>
-            <div> 20€</div>
+        <div class="menu_resto_bloc menu_resto_bloc-3">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Soupe à l'oignon</b><br />
+                    Revisitée </div>
+                <div class="menu_resto_bloc_box_price"><b> 20€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
+        </div>
+
+    </section>
+    <section class="menu_resto">
+        <h2 class="menu_resto_title"> PLATS</h2>
+        <div class="menu_resto_title_line"></div>
+
+        <div class="menu_resto_bloc menu_resto_bloc-1">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Coquilles Saint-Jacques </b><br />
+                    Accompagnées d'une purée de panais</div>
+                <div class="menu_resto_bloc_box_price"><b> 40€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
+        </div>
+
+        <div class="menu_resto_bloc menu_resto_bloc-2">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b> Magret de canard </b><br />
+                    Et parmentier de pommes de terre </div>
+                <div class="menu_resto_bloc_box_price"><b> 35€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
+        </div>
+        <div class="menu_resto_bloc menu_resto_bloc-3">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Pigeonneau d’Ille-et-Vilaine</b><br />
+                    Sur son lit de gnocchis aux légumes </div>
+                <div class="menu_resto_bloc_box_price"><b> 44€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
+        </div>
+
+    </section>
+    <section class="menu_resto">
+        <h2 class="menu_resto_title"> DESSERTS</h2>
+        <div class="menu_resto_title_line"></div>
+
+        <div class="menu_resto_bloc menu_resto_bloc-1">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Pétales de violettes glacés </b><br />
+                    Et purée de noisettes </div>
+                <div class="menu_resto_bloc_box_price"><b> 18€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
+        </div>
+
+        <div class="menu_resto_bloc menu_resto_bloc-2">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Fondant au chocolat</b><br />
+                    Revisité </div>
+                <div class="menu_resto_bloc_box_price"><b> 22€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
+        </div>
+        <div class="menu_resto_bloc menu_resto_bloc-3">
+            <div class="menu_resto_bloc_box">
+                <div class="menu_resto_bloc_box_name"> <b>Millefeuille croustillant </b><br />
+                    Myrtilles et pâte d’amande</div>
+                <div class="menu_resto_bloc_box_price"><b> 23€ </b></div>
+            </div>
+            <div class="menu_resto_button"><i class="fas fa-check-circle"></i> </div>
         </div>
 
     </section>
 
-    <section>
-        <h2> PLATS</h2>
 
-        <div>
-            <div> Coquilles Saint-Jacques</div>
-            <div> Accompagnées d'une purée de panais </div>
-            <div> 40€</div>
-        </div>
-        <div>
-            <div> Magret de canard</div>
-            <div> Et parmentier de pommes de terre</div>
-            <div> 35€</div>
-        </div>
-        <div>
-            <div> Pigeonneau d’Ille-et-Vilaine</div>
-            <div> Sur son lit de gnocchis aux légumes</div>
-            <div> 44€</div>
-        </div>
+    <div class="order">
+        <div class="desc_restaurant_p3">Commander</div>
 
-    </section>
-
-    <section>
-        <h2> DESSERTS</h2>
-
-        <div>
-            <div> Pétales de violettes glacés</div>
-            <div> Et purée de noisettes </div>
-            <div> 18€</div>
-        </div>
-        <div>
-            <div> Fondant au chocolat</div>
-            <div> Revisité</div>
-            <div> 22€</div>
-        </div>
-        <div>
-            <div> Millefeuille croustillant</div>
-            <div> Myrtilles et pâte d’amande</div>
-            <div> 23€</div>
-        </div>
-
-    </section>
-
-
+    </div>
     <footer>
         <h2 class="footer_title"> ohmyfood</h2>
         <p> <i class="fas fa-utensils"></i> Proposer un restaurant</p>
@@ -98,5 +137,6 @@
     </footer>
 
 </body>
+
 
 </html>

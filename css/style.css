@@ -18,7 +18,7 @@
   margin: 5%;
   margin-bottom: 3%;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   #logo {
     width: 400px;
     margin-top: 2%;
@@ -53,7 +53,7 @@
     height: 100%;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   @keyframes button {
     0% {
       transform: scaleX(0);
@@ -61,6 +61,18 @@
     100% {
       transform: scaleX(150px);
       width: 150px;
+      height: 100%;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  @keyframes button {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(200px);
+      width: 200px;
       height: 100%;
     }
   }
@@ -73,14 +85,23 @@
     width: 250px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   @keyframes description {
     0% {
-      width: 800px;
+      width: 640px;
     }
     100% {
-      width: 750px;
-      transform: scaleX(80px);
+      width: 550px;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  @keyframes description {
+    0% {
+      width: 90%;
+    }
+    100% {
+      width: 50%;
     }
   }
 }
@@ -97,8 +118,11 @@
     opacity: 0;
     transform: translateY(25px);
   }
-  50% {
-    opacity: 0.5;
+  25% {
+    opacity: 0.3;
+  }
+  75% {
+    opacity: 0.7;
   }
   100% {
     transform: translateY(0);
@@ -112,7 +136,7 @@ body {
   z-index: -1;
   font-family: robotoregular, serif;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   body {
     width: 90%;
     margin: auto;
@@ -127,12 +151,12 @@ body {
   left: 18%;
   z-index: 3;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .loading_spinner {
-    left: 18%;
+    left: 20%;
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .loading_spinner {
     top: 20%;
     left: 20%;
@@ -144,12 +168,12 @@ body {
   animation-fill-mode: forwards;
   font-size: 250px;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .fa-spinner {
     font-size: 500px;
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .fa-spinner {
     font-size: 1200px;
   }
@@ -161,7 +185,7 @@ header {
   display: flex;
   justify-content: center;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   header {
     justify-content: flex-start;
   }
@@ -189,12 +213,12 @@ nav {
   box-shadow: 0px 6px 6px #dbdbdb inset;
   background-color: #eaeaea;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   nav {
     height: 6em;
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   nav {
     height: 3em;
     width: 30%;
@@ -212,14 +236,14 @@ nav {
   background-color: #eaeaea;
   margin-left: 8%;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #search {
     font-size: 2rem;
     margin-left: 5%;
     width: 50%;
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   #search {
     border-radius: 10px;
     width: 50%;
@@ -230,7 +254,7 @@ nav {
   margin-left: 17%;
   font-size: 1.5em;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .fa-map-marker-alt {
     font-size: 2em;
     margin-left: 10%;
@@ -245,7 +269,7 @@ nav {
   padding-bottom: 20%;
   background-color: whitesmoke;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .desc_restaurant {
     flex-direction: row;
     justify-content: center;
@@ -259,7 +283,7 @@ nav {
   font-size: 1.9rem;
   margin-top: 8%;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .desc_restaurant_p1 {
     font-size: 3rem;
   }
@@ -269,12 +293,12 @@ nav {
   font-size: 1.2rem;
   margin-top: 3%;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .desc_restaurant_p2 {
     font-size: 2rem;
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .desc_restaurant_p2 {
     margin-top: 8%;
   }
@@ -296,7 +320,7 @@ nav {
   z-index: 1;
   outline: 0;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .desc_restaurant_p3 {
     font-size: 1.8rem;
     margin-top: 12%;
@@ -305,7 +329,7 @@ nav {
     outline-style: none;
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .desc_restaurant_p3 {
     width: 350px;
     outline-style: none;
@@ -327,7 +351,7 @@ nav {
   z-index: -1;
   transition: opacity 250ms;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .desc_restaurant_p3::after {
     font-size: 1.8rem;
     width: 80%;
@@ -335,7 +359,7 @@ nav {
     outline-style: none;
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .desc_restaurant_p3::after {
     width: 350px;
     outline-style: none;
@@ -354,12 +378,12 @@ nav {
   font-size: 2rem;
   margin-bottom: 0;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .menu_titre {
     font-size: 2.5rem;
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .menu_titre {
     margin-left: 0;
     margin-left: 2%;
@@ -379,7 +403,7 @@ nav {
   top: 55px;
   left: 3%;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .menu_number {
     font-size: 2.3rem;
     top: 90px;
@@ -387,7 +411,7 @@ nav {
     height: 50px;
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .menu_number {
     font-size: 2rem;
     top: 68px;
@@ -408,17 +432,17 @@ nav {
   font-size: 1rem;
   margin-left: 0;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .menu_bloc {
     font-size: 3rem;
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .menu_bloc {
     width: 30%;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .menu_bloc {
     font-size: 2.3rem;
     height: 130px;
@@ -435,7 +459,7 @@ nav {
   margin-left: 12%;
   color: #a3a3a3;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .fa-mobile-alt, .fa-ellipsis-v, .fa-store {
     font-size: 2rem;
   }
@@ -444,7 +468,7 @@ nav {
 .fa-bars {
   color: #a3a3a3;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .fa-bars {
     font-size: 2rem;
   }
@@ -461,7 +485,7 @@ nav {
   background-color: whitesmoke;
   padding-bottom: 60px;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .restaurant {
     flex-direction: row;
     flex-wrap: wrap;
@@ -475,12 +499,12 @@ nav {
   padding-top: 40px;
   font-size: 2rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .restaurant_title {
     font-size: 2.5rem;
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .restaurant_title {
     margin-left: 0;
     padding-top: 20px;
@@ -500,14 +524,14 @@ nav {
   color: #000;
   display: inline-block;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .restaurant_box {
     width: 45%;
     height: 400px;
     box-shadow: 6px 6px 20px #dbdbdb;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .restaurant_box {
     height: 450px;
   }
@@ -535,12 +559,12 @@ nav {
   top: 20px;
   right: 2%;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .restaurant_pict-new {
     font-size: 2rem;
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .restaurant_pict-new {
     font-size: 2rem;
   }
@@ -567,12 +591,12 @@ nav {
   font-size: 1rem;
   padding-top: 3%;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .restaurant_descr {
     font-size: 2rem;
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .restaurant_descr {
     font-size: 1.8rem;
     justify-content: space-between;
@@ -582,7 +606,7 @@ nav {
   margin-right: 40%;
   margin-left: 5%;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .restaurant_descr-name {
     margin-right: 10%;
   }
@@ -595,7 +619,7 @@ nav {
   margin-top: 2%;
   z-index: 1;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .fa-heart {
     position: relative;
     right: 20px;
@@ -604,7 +628,7 @@ nav {
 .fa-heart:active.fa-heart-2 {
   opacity: 1;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .fa-heart:hover.fa-heart-2 {
     opacity: 1;
   }
@@ -618,7 +642,7 @@ nav {
   opacity: 0;
   transition: opacity 300ms;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .fa-heart-2 {
     position: relative;
     right: 20px;
@@ -630,15 +654,23 @@ nav {
 /* FIN PAGE ACCUEIL */
 /* DEBUT PAGES RESTAURANTS */
 .bloc_resto_pict {
-  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 70%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   z-index: -1;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .bloc_resto_pict {
-    height: 550px;
-    margin-bottom: 0%;
+    height: 700px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .bloc_resto_pict {
+    height: 800px;
   }
 }
 .bloc_resto_pict_palette {
@@ -646,6 +678,8 @@ nav {
 }
 .bloc_resto_pict_francaise {
   background-image: url("../../maquettes_ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-position-x: 20%;
+  background-position-y: 50%;
 }
 .bloc_resto_pict_note {
   background-image: url("../../maquettes_ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
@@ -654,33 +688,37 @@ nav {
   background-image: url("../../maquettes_ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 .bloc_resto_pict_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   z-index: 1;
   background-color: whitesmoke;
   font-size: 1.7rem;
-  padding-top: 8%;
   padding-left: 4%;
   padding-right: 25%;
-  height: 25%;
-  position: relative;
-  top: 157px;
-  border-radius: 30px 30px 0px 0px;
+  height: 35%;
+  border-radius: 50px 50px 0px 0px;
   font-family: shrikhandregular, serif;
   font-weight: lighter;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .bloc_resto_pict_title {
     font-size: 3rem;
+    height: 30%;
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .bloc_resto_pict_title {
     font-size: 3rem;
-    bottom: 0;
+    height: 30%;
+    padding-right: 10%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 .bloc_resto_pict .fa-heart {
-  position: absolute;
-  top: 20px;
+  padding-bottom: 5%;
   color: black;
 }
 
@@ -690,7 +728,12 @@ nav {
   align-items: center;
   background-color: whitesmoke;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .menu_resto {
+    padding-top: 5%;
+  }
+}
+@media screen and (min-width: 1024px) {
   .menu_resto {
     margin-top: 0;
   }
@@ -701,10 +744,15 @@ nav {
   padding-left: 5%;
   align-self: flex-start;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .menu_resto_title {
     font-size: 2rem;
     padding-left: 3%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu_resto_title {
+    font-size: 2.5rem;
   }
 }
 .menu_resto_title_line {
@@ -715,11 +763,17 @@ nav {
   margin-left: 5%;
   align-self: flex-start;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .menu_resto_title_line {
     margin-top: -20px;
     width: 80px;
     margin-left: 3%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu_resto_title_line {
+    width: 120px;
+    margin-top: -30px;
   }
 }
 .menu_resto_bloc {
@@ -731,13 +785,23 @@ nav {
   border-radius: 20px;
   background-color: #fff;
   margin-bottom: 5%;
-  border: 1px solid black;
+  box-shadow: 6px 6px 20px #c2c2c2;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .menu_resto_bloc {
     font-size: 1.8rem;
     height: 150px;
     line-height: 55px;
+    margin-top: 5%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu_resto_bloc {
+    font-size: 2rem;
+    height: 200px;
+    line-height: 55px;
+    margin-top: 2%;
+    margin-bottom: 2%;
   }
 }
 .menu_resto_bloc-1 {
@@ -752,12 +816,15 @@ nav {
   animation: bloc_menu 1000ms 1000ms;
   animation-fill-mode: backwards;
 }
+.menu_resto_bloc-4 {
+  animation: bloc_menu 1000ms 1500ms;
+  animation-fill-mode: backwards;
+}
 .menu_resto_bloc_box {
   display: flex;
   align-items: flex-end;
   width: 95%;
   margin-left: 1%;
-  border: 1px solid green;
 }
 .menu_resto_bloc_box:active + .menu_resto_button {
   animation: button 500ms;
@@ -766,7 +833,18 @@ nav {
 .menu_resto_bloc_box:active + .menu_resto_button .fa-check-circle {
   display: inline;
   color: #fff;
-  animation: check 500ms 400ms;
+  animation: check 500ms 300ms;
+}
+@media screen and (min-width: 1024px) {
+  .menu_resto_bloc_box:hover + .menu_resto_button {
+    animation: button 500ms;
+    animation-fill-mode: both;
+  }
+  .menu_resto_bloc_box:hover + .menu_resto_button .fa-check-circle {
+    display: inline;
+    color: #fff;
+    animation: check 500ms 300ms;
+  }
 }
 .menu_resto_bloc_box_name {
   cursor: pointer;
@@ -775,11 +853,15 @@ nav {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  border: 1px solid red;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .menu_resto_bloc_box_name {
-    width: 800px;
+    width: 640px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu_resto_bloc_box_name {
+    width: 90%;
   }
 }
 .menu_resto_bloc_box_name:active {
@@ -791,7 +873,11 @@ nav {
 }
 .menu_resto_bloc_box_price {
   margin-left: 0%;
-  border: 1px solid blue;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .menu_resto_bloc_box_price {
+    margin-right: 2%;
+  }
 }
 .menu_resto_button {
   z-index: 1;
@@ -801,13 +887,17 @@ nav {
   border-radius: 0px 20px 20px 0px;
   background-color: #99E2D0;
   transform-origin: right 50%;
-  border: 1px solid yellow;
 }
 .menu_resto_button .fa-check-circle {
   display: none;
   font-size: 1.8rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .menu_resto_button .fa-check-circle {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
   .menu_resto_button .fa-check-circle {
     font-size: 3.5rem;
   }
@@ -842,12 +932,12 @@ footer #contact {
   text-decoration: none;
   color: #fff;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   footer {
     font-size: 2rem;
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   footer {
     font-size: 2rem;
   }
