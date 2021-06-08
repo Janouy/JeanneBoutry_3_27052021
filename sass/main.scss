@@ -7,6 +7,8 @@
 
 /* DEBUT PAGE ACCUEIL */
 body{
+    animation: body 2ms 3000ms;
+    animation-fill-mode: both;
     margin:0;
     width: 100%;
     z-index: -1;
@@ -228,6 +230,7 @@ margin-bottom: 90px;
      }
 }
 &_bloc{
+    cursor:pointer;
     display: flex;
     align-items: center;
     width: $case_width;
@@ -238,6 +241,14 @@ margin-bottom: 90px;
     box-shadow: 6px 6px 20px lighten($color_grey, 40%);
     font-size:1rem;
     margin-left: 0;
+    &:hover{
+        animation: scale_bloc 300ms;
+        animation-fill-mode: forwards;
+        z-index:-1;
+    }
+    &:hover + .menu_number{  
+        z-index:1;
+    }
     @media screen and (min-width: 768px) and (max-width: 1023px){
       font-size: 3rem;
      

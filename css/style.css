@@ -42,6 +42,22 @@
     transform: scale(0);
   }
 }
+@keyframes body {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes scale_bloc {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(110%);
+  }
+}
 @keyframes button {
   0% {
     transform: scaleX(0);
@@ -399,6 +415,8 @@
 /* FIN PAGES RESTAURANTS */
 /* DEBUT PAGE ACCUEIL */
 body {
+  animation: body 2ms 3000ms;
+  animation-fill-mode: both;
   margin: 0;
   width: 100%;
   z-index: -1;
@@ -617,7 +635,7 @@ nav {
   width: 70%;
   height: 65px;
   background: linear-gradient(to bottom, #ff93e1, #a16be0);
-  box-shadow: 6px 6px 20px black;
+  box-shadow: 6px 6px 20px #4f4f4f;
   border-radius: 50px;
   opacity: 0;
   z-index: -1;
@@ -693,6 +711,7 @@ nav {
   }
 }
 .menu_bloc {
+  cursor: pointer;
   display: flex;
   align-items: center;
   width: 90%;
@@ -703,6 +722,14 @@ nav {
   box-shadow: 6px 6px 20px #dbdbdb;
   font-size: 1rem;
   margin-left: 0;
+}
+.menu_bloc:hover {
+  animation: scale_bloc 300ms;
+  animation-fill-mode: forwards;
+  z-index: -1;
+}
+.menu_bloc:hover + .menu_number {
+  z-index: 1;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .menu_bloc {
