@@ -2,6 +2,8 @@
 @import"./base/polices";
 @import"./utils/mixins";
 @import"./utils/keyframes";
+@import"./layout/restaurants";
+
 
 /* DEBUT PAGE ACCUEIL */
 body{
@@ -17,17 +19,18 @@ body{
 /* début loading_spinner */
 
 .loading_spinner{
+    visibility: hidden;
     display: flex;
     justify-content: center;
     width: 100%;
     position: absolute;
-    top:50%;
+    top:70%;
     z-index: 3;
     @media screen and (min-width: 768px) and (max-width: 1023px){
         
     }
     @media screen and (min-width: 1024px){
-        top:20%;
+        top:30%;
         
     }
    
@@ -48,8 +51,7 @@ body{
 }
 
 
-    /* fin loading_spinner */
-
+    /* fin loading_spinner 
 
     
 /* début header */
@@ -115,7 +117,8 @@ nav{
     }
     @media screen and (min-width: 1024px){
         border-radius: 10px;
-        width: 50%;
+        width: 60%;
+       
      }
      
     
@@ -225,7 +228,23 @@ margin-bottom: 90px;
      }
 }
 &_bloc{
-@include blocs;
+    display: flex;
+    align-items: center;
+    width: $case_width;
+    height: 80px;
+    background-color: lighten($color_grey, 50%);
+    border-radius:50px;
+    font-weight: bold;;
+    box-shadow: 6px 6px 20px lighten($color_grey, 40%);
+    font-size:1rem;
+    margin-left: 0;
+    @media screen and (min-width: 768px) and (max-width: 1023px){
+      font-size: 3rem;
+     
+    }
+    @media screen and (min-width: 1024px){
+      width: 30%;
+   }
 @media screen and (min-width: 768px) and (max-width: 1023px){
     font-size: 2.3rem;
     height: 130px;
@@ -246,7 +265,7 @@ margin-bottom: 90px;
     color: lighten($color_grey, 18%);
     @media screen and (min-width: 1024px){
         font-size: 2rem;
-       
+        margin-left: 20%;
      }
 }
 
@@ -294,7 +313,21 @@ margin-bottom: 90px;
     }
 
     &_box{
-  @include box;
+        width: $case_width;
+        height: 230px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 50px;
+        margin-bottom: 7%;
+        background-color: #fff;
+        text-decoration: none;
+        color: #000;
+        display: inline-block;
+        @media screen and (min-width: 1024px){
+         width: 45%;
+         height:400px;
+         box-shadow: 6px 6px 20px lighten($color_grey, 40%);
+       }
   @media screen and (min-width: 768px) and (max-width: 1023px){
     
      height: 450px;
@@ -318,7 +351,7 @@ margin-bottom: 90px;
             font-weight: bold;
            background-color:$color_tertiary;
            color: darken($color_tertiary, 40%);
-           border-radius: 2px;
+           border-radius: 10px;
            position: relative;
            top: 20px;
            right: 2%;
@@ -326,7 +359,7 @@ margin-bottom: 90px;
             font-size: 2rem;
         }
         @media screen and (min-width: 1024px){
-           font-size: 2rem;
+           font-size: 1.5rem;
          }
         }
     }
@@ -421,27 +454,7 @@ margin-bottom: 90px;
 
 /* FIN PAGE ACCUEIL */
 
-/* DEBUT PAGES RESTAURANTS */
 
-.bloc_resto{
-
-    @include bloc_resto;
-}
-
-.menu_resto{
-    
-    @include menu_resto;
-    
-}
-
-.order{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 15%;
-    background-color: lighten($color_grey, 50%);
-}
-
-/* FIN PAGES RESTAURANTS */
 
 
 

@@ -2,7 +2,7 @@
     0%{
         transform: rotate(0deg);
         color: lighten($color_secondary, 10%);
-        
+        visibility: visible;
     }
     
     90%{
@@ -13,6 +13,7 @@
 
     100%{
         transform: scale(0);
+        
     }
     
     }
@@ -25,9 +26,9 @@
         }
        
         100%{
-         transform: scaleX(80px);
-         width:80px;
-         height: 100%;
+         transform: scaleX(100%);
+         width: 75px;
+         height:100%;
         }
       } 
 
@@ -39,7 +40,7 @@
          }
         
          100%{
-          transform: scaleX(150px);
+          transform: scaleX(100%);
           width:150px;
           height: 100%;
          }
@@ -54,7 +55,7 @@
            }
           
            100%{
-            transform: scaleX(200px);
+            transform: scaleX(100%);
             width:200px;
             height: 100%;
            }
@@ -65,15 +66,13 @@
 
       @keyframes description{
         0%{
-          width: 85%;
+          width: 95%;
       }
       
-     
         100%{
-        width: 75%;
-        
+        width: 80%;
         }
-      }
+      } 
       
       @media screen and (min-width: 768px) and (max-width: 1023px){
         @keyframes description{
@@ -81,7 +80,6 @@
             width: 90%;
         }
         
-       
           100%{
           width: 80%;
           
@@ -92,12 +90,12 @@
       @media screen and (min-width: 1024px){
         @keyframes description{
           0%{
-            width: 90%;
+            width: 95%;
         }
         
        
           100%{
-          width: 80%;
+          width: 92%;
           
           }
         }
