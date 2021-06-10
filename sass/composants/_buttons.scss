@@ -5,13 +5,119 @@
     padding-bottom: 15%;
     background-color: lighten($color_grey, 50%);
     &_button{
-      @include button;
+      cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  width: 70%;
+  height: 65px;
+  background: linear-gradient(to bottom, $color_secondary, $color_primary);
+  margin-top: 8%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: 6px 6px 20px $color_grey;
+  z-index:1;
+  outline: 0;
+  @media screen and (min-width: 768px) and (max-width: 1023px){
+   font-size: 1.8rem;
+   margin-top: 12%;
+   width: 80%;
+  height: 80px;
+  outline-style:none;
+}
+@media screen and (min-width: 1024px){
+   width: 350px;
+   outline-style:none;
+}
+  &:hover{
+   &::after{
+   opacity:1;
+   }
+}
+&::after{
+   content: "";
+   outline-style:none;
+   position: absolute;
+   width: 70%;
+   height: 65px;
+   background: linear-gradient(to bottom, lighten($color_secondary, 5%), lighten($color_primary, 5%));
+   box-shadow: 6px 6px 20px darken($color_grey,15%);
+   border-radius: 50px;
+   opacity:0;
+   z-index:-1;
+   transition: opacity 250ms;
+   @media screen and (min-width: 768px) and (max-width: 1023px){
+       font-size: 1.8rem;
+       width: 80%;
+      height: 80px;
+      outline-style:none;
+}
+@media screen and (min-width: 1024px){
+   width: 350px;
+   outline-style:none;
+}
+}
     }
 }
 
 .desc_restaurant{   /*bouton page d'accueil "explorer nos restaurants" */
     &_p3{
-        @include button;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      width: 70%;
+      height: 65px;
+      background: linear-gradient(to bottom, $color_secondary, $color_primary);
+      margin-top: 8%;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 50px;
+      box-shadow: 6px 6px 20px $color_grey;
+      z-index:1;
+      outline: 0;
+      @media screen and (min-width: 768px) and (max-width: 1023px){
+       font-size: 1.8rem;
+       margin-top: 12%;
+       width: 80%;
+      height: 80px;
+      outline-style:none;
+    }
+    @media screen and (min-width: 1024px){
+       width: 350px;
+       outline-style:none;
+    }
+      &:hover{
+       &::after{
+       opacity:1;
+       }
+    }
+    &::after{
+       content: "";
+       outline-style:none;
+       position: absolute;
+       width: 70%;
+       height: 65px;
+       background: linear-gradient(to bottom, lighten($color_secondary, 5%), lighten($color_primary, 5%));
+       box-shadow: 6px 6px 20px darken($color_grey,15%);
+       border-radius: 50px;
+       opacity:0;
+       z-index:-1;
+       transition: opacity 250ms;
+       @media screen and (min-width: 768px) and (max-width: 1023px){
+           font-size: 1.8rem;
+           width: 80%;
+          height: 80px;
+          outline-style:none;
+    }
+    @media screen and (min-width: 1024px){
+       width: 350px;
+       outline-style:none;
+    }
+    }
  
  }
 }

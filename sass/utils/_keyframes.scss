@@ -42,8 +42,9 @@
   
         0%{
          transform: scaleX(0);
-      
+         width: 75px;
         }
+     
        
         100%{
          transform: scaleX(100%);
@@ -57,7 +58,7 @@
         @keyframes button{
         0%{
           transform: scaleX(0);
-          
+          width:150px;
          }
         
          100%{
@@ -71,8 +72,8 @@
       @media screen and (min-width: 1024px){
         @keyframes button{
           0%{
-            transform: scaleX(0);
-            
+            transform: scaleX(0%);
+            width:200px;
            }
           
            100%{
@@ -127,11 +128,13 @@
         0%{
           transform: rotate(-360deg);
           
+          
         }
         
         100%{
           transform: rotate(0deg);
          
+          
         }
       }
 

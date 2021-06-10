@@ -12,20 +12,6 @@
   font-weight: normal;
   font-style: normal;
 }
-/* DEBUT PAGE ACCUEIL */
-#logo {
-  width: 60%;
-  margin: 5%;
-  margin-bottom: 3%;
-}
-@media screen and (min-width: 1024px) {
-  #logo {
-    width: 400px;
-    margin-top: 2%;
-  }
-}
-
-/* FIN PAGE ACCUEIL */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -59,6 +45,7 @@
 @keyframes button {
   0% {
     transform: scaleX(0);
+    width: 75px;
   }
   100% {
     transform: scaleX(100%);
@@ -70,6 +57,7 @@
   @keyframes button {
     0% {
       transform: scaleX(0);
+      width: 150px;
     }
     100% {
       transform: scaleX(100%);
@@ -81,7 +69,8 @@
 @media screen and (min-width: 1024px) {
   @keyframes button {
     0% {
-      transform: scaleX(0);
+      transform: scaleX(0%);
+      width: 200px;
     }
     100% {
       transform: scaleX(100%);
@@ -282,6 +271,7 @@ body {
 .menu_resto_bloc {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-size: 1rem;
   width: 95%;
   height: 80px;
@@ -347,17 +337,20 @@ body {
 }
 .menu_resto_bloc_box:active + .menu_resto_button {
   animation: button 500ms;
-  animation-fill-mode: both;
+  animation-fill-mode: forwards;
+  transition-timing-function: cubic-bezier(0.04, 0.43, 0.94, 0.22);
 }
 .menu_resto_bloc_box:active + .menu_resto_button .fa-check-circle {
   display: inline;
   color: #fff;
   animation: check 500ms 300ms;
+  transform-origin: right, 50%;
 }
 @media screen and (min-width: 1024px) {
   .menu_resto_bloc_box:hover + .menu_resto_button {
     animation: button 500ms;
     animation-fill-mode: both;
+    transition-timing-function: ease-out;
   }
   .menu_resto_bloc_box:hover + .menu_resto_button .fa-check-circle {
     display: inline;
@@ -399,6 +392,7 @@ body {
   border-radius: 0px 20px 20px 0px;
   background-color: #99E2D0;
   transform-origin: right 50%;
+  height: 100%;
 }
 .menu_resto_button .fa-check-circle {
   display: none;
@@ -1061,5 +1055,16 @@ header .fa-arrow-left {
 }
 
 /* fin loading_spinner */
+#logo {
+  width: 60%;
+  margin: 5%;
+  margin-bottom: 3%;
+}
+@media screen and (min-width: 1024px) {
+  #logo {
+    width: 400px;
+    margin-top: 2%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

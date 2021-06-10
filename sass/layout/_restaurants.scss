@@ -78,7 +78,7 @@ body{
 
 .menu_resto{
     
-    display: flex;
+display: flex;
 flex-direction: column;
 align-items:center;
 background-color: lighten($color_grey, 50%);
@@ -123,6 +123,7 @@ background-color: lighten($color_grey, 50%);
 &_bloc{
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-size: 1rem;
   width: 95%;
   height: 80px;
@@ -186,18 +187,21 @@ background-color: lighten($color_grey, 50%);
     }}
     &:active + .menu_resto_button{
       animation: button 500ms;
-      animation-fill-mode: both;
+      animation-fill-mode: forwards;
+      transition-timing-function: cubic-bezier(0.04, 0.43, 0.94, 0.22);
      
      & .fa-check-circle{
        display: inline;
        color: #fff;
        animation: check 500ms 300ms;
+       transform-origin: right,50%;
      }
       }
       @media screen and (min-width: 1024px){
         &:hover + .menu_resto_button{
           animation: button 500ms;
           animation-fill-mode: both;
+          transition-timing-function: ease-out;
          & .fa-check-circle{
             display: inline;
             color: #fff;
@@ -241,8 +245,10 @@ background-color: lighten($color_grey, 50%);
     border-radius: 0px 20px 20px 0px;
     background-color: #99E2D0;
     transform-origin: right 50%;
+    height:100%;
+    
     & .fa-check-circle{
-       display: none;
+       display:none;
        font-size: 1.8rem;
        @media screen and (min-width: 768px) and (max-width: 1023px){
         font-size:3.5rem;
