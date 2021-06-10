@@ -1,18 +1,18 @@
-@import"./utils/variables";
-
 @import"./base/polices";
 
+@import"./utils/variables";
 @import"./utils/mixins";
 @import"./utils/keyframes";
+@import"./utils/functions";
 
 @import"./layout/restaurants";
 @import"./layout/accueil";
 @import"./layout/footer";
 @import"./layout/header";
 
-@import"./composants/buttons";
-@import"./composants/loading_spinner";
-@import"./composants/logo";
+@import"./components/buttons";
+@import"./components/loading_spinner";
+@import"./components/logo";
 
 
 
