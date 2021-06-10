@@ -1,0 +1,25 @@
+/* début header */
+
+header{
+    display: flex;
+    justify-content: center;
+  @media screen and (min-width: 1024px){
+    justify-content: flex-start;
+    
+  }
+    
+    .fa-arrow-left{
+    
+        font-size: 1.3rem;
+        position: absolute;
+        top: 4%;
+        left: 3%;
+        color: #000;
+        @media screen and (min-width: 1024px){
+          top: 7%;
+          left: 2%;
+         }
+    }
+
+}
+    /* fin header */

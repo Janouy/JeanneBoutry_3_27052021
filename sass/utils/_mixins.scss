@@ -1,13 +1,6 @@
 /* DEBUT PAGE ACCUEIL */
 
-@mixin header{
-  display: flex;
-  justify-content: center;
-@media screen and (min-width: 1024px){
-  justify-content: flex-start;
-  
-}
-}
+
 #logo{
   
   width: 60%;
@@ -79,34 +72,3 @@
 /* FIN PAGE ACCUEIL */
 
 
-/* début bloc footer */
-
-@mixin footer{
-  background-color: darken($color_grey, 20%);
-  color: #fff;
-  font-size: 1rem;
-  margin-top: 0;
-  border: 2px darken($color_grey, 20%) solid;
-  padding-left: 5%;
-  font-family: robotoregular, serif;
-  .footer_title{
-    font-family: shrikhandregular, serif;
-    font-weight:lighter;
-  }
-  .fa-utensils, .fa-hands-helping{
-    margin-right: 2%;
-  }
-  #contact{
-    text-decoration: none;
-    color: #fff;
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1023px){
-    font-size: 2rem;
-}
-@media screen and (min-width: 1024px){
-    font-size: 2rem;
-}
-}
-
-/* fin bloc footer */

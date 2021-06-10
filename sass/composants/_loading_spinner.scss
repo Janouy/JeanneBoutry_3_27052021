@@ -1,0 +1,51 @@
+/* début loading_spinner */
+
+
+.body_accueil{
+    animation: body 2ms 3000ms;
+    animation-fill-mode: both;
+    animation: body 2ms 3000ms;
+    animation-fill-mode: both;
+    margin:0;
+    width: 100%;
+    z-index: -1;
+    font-family: robotoregular, serif;
+    @media screen and (min-width: 1024px){
+        margin: auto;
+     }
+}
+
+
+
+.loading_spinner{
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top:70%;
+    z-index: 3;
+    @media screen and (min-width: 768px) and (max-width: 1023px){
+        
+    }
+    @media screen and (min-width: 1024px){
+        top:30%;
+        
+    }
+   
+}
+
+.fa-spinner{
+    
+    animation: spin 3000ms;
+    animation-fill-mode: forwards; 
+    font-size: 250px;
+    align-items: center;
+    @media screen and (min-width: 768px) and (max-width: 1023px){
+        font-size: 500px;
+    }
+   @media screen and (min-width: 1024px){
+       font-size: 800px;
+   }
+}
+    /* fin loading_spinner */

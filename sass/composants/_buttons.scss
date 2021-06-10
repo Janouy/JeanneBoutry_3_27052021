@@ -1,0 +1,17 @@
+
+.order{     /*bouton du bas "commander" */
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15%;
+    background-color: lighten($color_grey, 50%);
+    &_button{
+      @include button;
+    }
+}
+
+.desc_restaurant{   /*bouton page d'accueil "explorer nos restaurants" */
+    &_p3{
+        @include button;
+ 
+ }
+}

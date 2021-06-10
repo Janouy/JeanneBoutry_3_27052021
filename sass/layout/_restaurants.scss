@@ -1,5 +1,13 @@
 /* DEBUT PAGES RESTAURANTS */
-
+body{
+    margin:0;
+    width: 100%;
+    z-index: -1;
+    font-family: robotoregular, serif;
+    @media screen and (min-width: 1024px){
+        margin: auto;
+     }
+}
 .bloc_resto{
 
     &_pict{
@@ -181,8 +189,8 @@ background-color: lighten($color_grey, 50%);
       animation-fill-mode: both;
      
      & .fa-check-circle{
-        display: inline;
-        color: #fff;
+       display: inline;
+       color: #fff;
        animation: check 500ms 300ms;
      }
       }
@@ -194,7 +202,6 @@ background-color: lighten($color_grey, 50%);
             display: inline;
             color: #fff;
            animation: check 500ms 300ms;
-           
           }
        }
     }
@@ -235,7 +242,7 @@ background-color: lighten($color_grey, 50%);
     background-color: #99E2D0;
     transform-origin: right 50%;
     & .fa-check-circle{
-      display: none;
+       display: none;
        font-size: 1.8rem;
        @media screen and (min-width: 768px) and (max-width: 1023px){
         font-size:3.5rem;
@@ -248,11 +255,5 @@ background-color: lighten($color_grey, 50%);
     
 }
 
-.order{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 15%;
-    background-color: lighten($color_grey, 50%);
-}
 
 /* FIN PAGES RESTAURANTS */

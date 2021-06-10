@@ -1,0 +1,389 @@
+
+/* DEBUT PAGE ACCUEIL */
+/* début main */
+
+main{
+
+    width: auto;
+}
+
+
+nav{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4em;
+    box-shadow: 0px 6px 6px lighten($color_grey, 40%) inset;
+    background-color: lighten($color_grey, 46%);
+    @media screen and (min-width: 768px) and (max-width: 1023px){
+        height: 6em;
+       
+    }
+    @media screen and (min-width: 1024px){
+       height: 3em;
+       width:30%;
+       border-radius: 5px;
+       position: absolute;
+       right:5%;
+       top: 0%;
+    }
+    
+}
+
+#search{
+
+    border :none;
+    width: 100%;
+    font-size: 1.3rem;
+    background-color: lighten($color_grey, 46%);
+    margin-left: 8%;
+    @media screen and (min-width: 768px) and (max-width: 1023px){
+        font-size: 2rem;
+        margin-left: 5%;
+        width: 50%;
+    }
+    @media screen and (min-width: 1024px){
+        border-radius: 10px;
+        width: 60%;
+       
+     }
+     
+    
+}
+
+.fa-map-marker-alt{
+ margin-left: 17%;
+ font-size: 1.5em;
+ @media screen and (min-width: 768px) and (max-width: 1023px){
+    font-size:2em;
+    margin-left: 10%;
+}
+ 
+}
+
+.desc_restaurant{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   align-items: center;
+   padding-bottom: 20%;
+   background-color: lighten($color_grey, 50%);
+   @media screen and (min-width: 1024px){
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    padding-bottom: 8%;
+    border-radius: 15px;
+ }
+
+   &_p1{
+    font-weight: bold;
+    font-size: 1.9rem;
+    margin-top: 8%;
+    @media screen and (min-width: 768px) and (max-width: 1023px){
+        font-size: 3rem;
+    }
+  
+   }
+
+   &_p2{
+       color: darken($color_grey, 20%);
+       font-size: 1.2rem;
+       margin-top: 3%;
+       @media screen and (min-width: 768px) and (max-width: 1023px){
+        font-size: 2rem; 
+    }
+    @media screen and (min-width: 1024px){
+       margin-top: 8%;
+     }
+   }
+
+
+}
+
+.menu{
+
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 90px;
+
+
+&_titre{
+   align-self: flex-start;
+  margin-left: 5%;
+   font-size: 2rem;
+   margin-bottom: 0;
+   @media screen and (min-width: 768px) and (max-width: 1023px){
+    font-size: 2.5rem;
+  }
+  @media screen and (min-width: 1024px){
+    margin-left:0;
+    margin-left: 2%;
+ }
+
+}
+
+&_number{
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 1.2rem;
+    background-color: $color_primary;
+    color: #fff;
+    text-align: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50px;
+    position: relative;
+    top: 55px;
+    left: 3%;
+    @media screen and (min-width: 768px) and (max-width: 1023px){
+        font-size: 2.3rem;
+        top: 90px;
+        width: 50px;
+         height: 50px;
+    }
+    @media screen and (min-width: 1024px){
+        font-size: 2rem;
+        top: 68px;
+        left: 34%;
+        width: 50px;
+        height: 50px;
+     }
+}
+&_bloc{
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    width: $case_width;
+    height: 80px;
+    background-color: lighten($color_grey, 50%);
+    border-radius:50px;
+    font-weight: bold;;
+    box-shadow: 6px 6px 20px lighten($color_grey, 40%);
+    font-size:1rem;
+    margin-left: 0;
+    &:hover{
+        animation: scale_bloc 300ms;
+        animation-fill-mode: forwards;
+        z-index:-1;
+    }
+    &:hover + .menu_number{  
+        z-index:1;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1023px){
+      font-size: 3rem;
+     
+    }
+    @media screen and (min-width: 1024px){
+      width: 30%;
+   }
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    font-size: 2.3rem;
+    height: 130px;
+}
+    &-items{
+     margin-left: 10%;
+  
+    }
+    &-purple{
+        background-color: lighten($color_primary, 35%);
+    }
+}
+}
+
+.fa-mobile-alt, .fa-ellipsis-v, .fa-store{
+
+    margin-left: 12%;
+    color: lighten($color_grey, 18%);
+    @media screen and (min-width: 1024px){
+        font-size: 2rem;
+        margin-left: 20%;
+     }
+}
+
+.fa-bars{
+    color: lighten($color_grey, 18%);
+    @media screen and (min-width: 1024px){
+        font-size: 2rem;
+       
+     }
+
+}
+
+.fa-store{
+    color: $color_primary;
+}
+
+.restaurant{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lighten($color_grey, 50%);
+    padding-bottom: 60px;
+    @media screen and (min-width: 1024px){
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: 15px;
+        justify-content: space-around;
+     }
+
+    &_title{
+        align-self: flex-start;
+        margin-left: 5%;
+        padding-top: 40px;
+        font-size: 2rem;
+        @media screen and (min-width: 768px) and (max-width: 1023px){
+            font-size: 2.5rem;
+        }
+        @media screen and (min-width: 1024px){
+            margin-left:0;
+            padding-top: 20px;
+            width: 100%;
+            margin-left: 2%;
+         }
+    }
+
+    &_box{
+        width: $case_width;
+        height: 230px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 50px;
+        margin-bottom: 7%;
+        background-color: #fff;
+        text-decoration: none;
+        color: #000;
+        display: inline-block;
+        @media screen and (min-width: 1024px){
+         width: 45%;
+         height:400px;
+         box-shadow: 6px 6px 20px lighten($color_grey, 40%);
+       }
+  @media screen and (min-width: 768px) and (max-width: 1023px){
+    
+     height: 450px;
+}
+    }
+
+    &_pict{
+        width: 100%;
+         height: 70%;
+         background-size: cover;
+           background-repeat: no-repeat;
+            border-radius: 30px 30px 0px 0px;
+        &-new{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 75%;
+            width: 25%;
+            height: 20%;
+            font-size: 0.8rem;
+            font-weight: bold;
+           background-color:$color_tertiary;
+           color: darken($color_tertiary, 40%);
+           border-radius: 10px;
+           position: relative;
+           top: 20px;
+           right: 2%;
+           @media screen and (min-width: 768px) and (max-width: 1023px){
+            font-size: 2rem;
+        }
+        @media screen and (min-width: 1024px){
+           font-size: 1.5rem;
+         }
+        }
+    }
+    &_pict-1{
+        background-image: url("../maquettes_ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+        background-position-y: 70%;
+    }
+
+    &_pict-2{
+        background-image: url("../maquettes_ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+        background-position-y: 60%;
+        
+    }
+
+    &_pict-3{
+        background-image: url("../maquettes_ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+        background-position-y: 80%;
+    }
+
+    &_pict-4{
+        background-image: url("../maquettes_ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+        background-position-y: 80%;
+    }
+
+    &_descr{
+       
+        display: flex;
+        justify-content: space-between;
+        font-size: 1rem;
+        padding-top: 3%;
+        @media screen and (min-width: 768px) and (max-width: 1023px){
+            font-size: 2rem;
+        }
+        @media screen and (min-width: 1024px){
+           font-size: 1.8rem;
+           justify-content: space-between;
+         }
+
+        &-name{
+            margin-right: 40%;
+            margin-left: 5%;
+            @media screen and (min-width: 1024px){
+                
+                margin-right: 10%;
+              }
+        }
+}
+}
+
+ .fa-heart{
+     
+    color: lighten($color_grey, 25%);
+    position: absolute;
+    right: 10%;
+    margin-top: 2%;
+    z-index: 1;
+    @media screen and (min-width: 1024px){
+        position: relative;
+       right: 20px;
+    }
+   
+&:active{
+    &.fa-heart-2{
+        opacity:1;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    &:hover{
+        &.fa-heart-2{
+            opacity:1;
+        }
+    }
+}
+ &-2{
+     z-index: 2;
+     background:-webkit-linear-gradient(right, $color_primary, $color_secondary);
+     background-clip:text;
+     -webkit-background-clip:text;
+     color:transparent;
+     opacity:0;
+     transition: opacity 1000ms;
+     @media screen and (min-width: 1024px){
+        position: relative;
+        right: 20px;
+        top: -59px;
+    }
+ }
+ } 
+/* fin main */
+
+
+/* FIN PAGE ACCUEIL */
