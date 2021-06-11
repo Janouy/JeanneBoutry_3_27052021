@@ -45,7 +45,7 @@
 @keyframes button {
   0% {
     transform: scaleX(0);
-    width: 75px;
+    width: 0px;
   }
   100% {
     transform: scaleX(100%);
@@ -57,7 +57,7 @@
   @keyframes button {
     0% {
       transform: scaleX(0);
-      width: 150px;
+      width: s0px;
     }
     100% {
       transform: scaleX(100%);
@@ -70,7 +70,7 @@
   @keyframes button {
     0% {
       transform: scaleX(0%);
-      width: 200px;
+      width: 0px;
     }
     100% {
       transform: scaleX(100%);
@@ -793,6 +793,7 @@ nav {
   }
 }
 .fa-heart-2 {
+  content: "";
   z-index: 2;
   background: -webkit-linear-gradient(right, #9356DC, #FF79DA);
   background-clip: text;

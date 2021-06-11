@@ -101,7 +101,8 @@
        position: absolute;
        width: 70%;
        height: 65px;
-       background: linear-gradient(to bottom, pastel($color_secondary), pastel($color_primary));
+       background: linear-gradient(to bottom, pastel($color_secondary), 
+       pastel($color_primary));
        box-shadow: 6px 6px 20px dark_shadow($color_grey);
        border-radius: 50px;
        opacity:0;
