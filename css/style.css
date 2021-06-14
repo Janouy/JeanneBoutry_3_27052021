@@ -36,10 +36,10 @@
 }
 @keyframes scale_bloc {
   0% {
-    transform: scale(100%);
+    transform: scale(1);
   }
   100% {
-    transform: scale(110%);
+    transform: scale(1.1);
   }
 }
 @keyframes button {
@@ -48,7 +48,7 @@
     width: 0px;
   }
   100% {
-    transform: scaleX(100%);
+    transform: scaleX(1);
     width: 75px;
     height: 100%;
   }
@@ -60,7 +60,7 @@
       width: 0px;
     }
     100% {
-      transform: scaleX(100%);
+      transform: scaleX(1);
       width: 130px;
       height: 100%;
     }
@@ -69,11 +69,11 @@
 @media screen and (min-width: 1024px) {
   @keyframes button {
     0% {
-      transform: scaleX(0%);
+      transform: scaleX(0);
       width: 0px;
     }
     100% {
-      transform: scaleX(100%);
+      transform: scaleX(1);
       width: 200px;
       height: 100%;
     }
@@ -344,7 +344,6 @@ body {
   display: inline;
   color: #fff;
   animation: check 500ms 300ms;
-  transform-origin: right, 50%;
 }
 @media screen and (min-width: 1024px) {
   .menu_resto_bloc_box:hover + .menu_resto_button {
@@ -796,7 +795,6 @@ nav {
   content: "";
   z-index: 2;
   background: -webkit-linear-gradient(right, #9356DC, #FF79DA);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
@@ -817,8 +815,8 @@ footer {
   background-color: #424242;
   color: #fff;
   font-size: 1rem;
-  margin-top: 0;
-  border: 2px #424242 solid;
+  padding-top: 1%;
+  padding-bottom: 1%;
   padding-left: 5%;
   font-family: robotoregular, serif;
 }
