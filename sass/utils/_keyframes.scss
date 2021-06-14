@@ -60,12 +60,12 @@
         @keyframes button{
         0%{
           transform: scaleX(0);
-          width:s0px;
+          width:0px;
          }
         
          100%{
           transform: scaleX(100%);
-          width:150px;
+          width:130px;
           height: 100%;
          }
       }}

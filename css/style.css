@@ -57,11 +57,11 @@
   @keyframes button {
     0% {
       transform: scaleX(0);
-      width: s0px;
+      width: 0px;
     }
     100% {
       transform: scaleX(100%);
-      width: 150px;
+      width: 130px;
       height: 100%;
     }
   }
@@ -861,6 +861,12 @@ header .fa-arrow-left {
   top: 4%;
   left: 3%;
   color: #000;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  header .fa-arrow-left {
+    font-size: 3rem;
+    top: 5.5%;
+  }
 }
 @media screen and (min-width: 1024px) {
   header .fa-arrow-left {
