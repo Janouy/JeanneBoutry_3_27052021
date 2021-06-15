@@ -434,7 +434,7 @@ nav {
     width: 30%;
     border-radius: 5px;
     position: absolute;
-    right: 5%;
+    right: 0;
     top: 0%;
   }
 }
@@ -533,8 +533,9 @@ nav {
 }
 @media screen and (min-width: 1024px) {
   .menu_titre {
+    align-self: center;
+    font-size: 3rem;
     margin-left: 0;
-    margin-left: 2%;
   }
 }
 .menu_number {
@@ -664,10 +665,11 @@ nav {
 }
 @media screen and (min-width: 1024px) {
   .restaurant_title {
+    font-size: 3rem;
     margin-left: 0;
     padding-top: 20px;
     width: 100%;
-    margin-left: 2%;
+    text-align: center;
   }
 }
 .restaurant_box {
@@ -839,6 +841,7 @@ footer #contact {
 @media screen and (min-width: 1024px) {
   footer {
     font-size: 2rem;
+    text-align: center;
   }
 }
 
@@ -850,8 +853,7 @@ header {
 }
 @media screen and (min-width: 1024px) {
   header {
-    justify-content: flex-start;
-    margin-left: 5%;
+    justify-content: center;
   }
 }
 header .fa-arrow-left {

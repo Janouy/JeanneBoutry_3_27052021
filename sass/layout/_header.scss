@@ -4,9 +4,7 @@ header{
     display: flex;
     justify-content: center;
   @media screen and (min-width: 1024px){
-    justify-content: flex-start;
-    margin-left: 5%;
-    
+    justify-content: center;
   }
     
     .fa-arrow-left{
@@ -21,7 +19,7 @@ header{
         @media screen and (min-width: 1024px){
           font-size: 3rem;
           top: 6%;
-          left: 2%;
+          left: 2%; 
          }
          
     }
